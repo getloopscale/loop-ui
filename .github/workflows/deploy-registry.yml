@@ -2,7 +2,7 @@ name: Deploy Registry to GitHub Pages
 
 # Publish registry/r/*.json to GitHub Pages so the shadcn copy-paste path
 # (`npx shadcn@latest add <url>/r/<name>.json`) resolves. Functional URL is
-# https://usetheodev.github.io/usetheo-ui/r/<name>.json — this is also what
+# https://getloopscale.github.io/ui/r/<name>.json — this is also what
 # @theokit/ui's registry cross-references via registryDependencies.
 
 on:
@@ -75,9 +75,9 @@ jobs:
           </head>
           <body>
             <h1>@usetheo/ui — registry</h1>
-            <p>shadcn-compatible component registry for <a href="https://github.com/usetheodev/usetheo-ui">@usetheo/ui</a> (the generic + cloud-ops layer that <a href="https://www.npmjs.com/package/@theokit/ui">@theokit/ui</a> builds on).</p>
+            <p>shadcn-compatible component registry for <a href="https://github.com/getloopscale/ui">@usetheo/ui</a> (the generic + cloud-ops layer that <a href="https://www.npmjs.com/package/@theokit/ui">@theokit/ui</a> builds on).</p>
             <p>Install any component:</p>
-            <pre><code>npx shadcn@latest add https://usetheodev.github.io/usetheo-ui/r/button.json</code></pre>
+            <pre><code>npx shadcn@latest add https://getloopscale.github.io/ui/r/button.json</code></pre>
             <p>See the <a href="index.json">catalog index</a> for all items.</p>
             <hr />
             <p>npm: <a href="https://www.npmjs.com/package/@usetheo/ui"><code>pnpm add @usetheo/ui</code></a></p>
