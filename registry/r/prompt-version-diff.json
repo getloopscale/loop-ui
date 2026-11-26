@@ -6,9 +6,9 @@
   "description": "Diffs two prompt versions by normalizing each snapshot's template (string passthrough; chat array -> 'role: content' text) and config (pretty JSON) to plain text, then composing DiffView for content and, when present, config. The config diff is omitted honestly when both versions have no config. Zero new dependency — reuses the DiffView primitive.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/diff-view.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/diff-view.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

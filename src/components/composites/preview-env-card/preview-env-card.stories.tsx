@@ -13,8 +13,8 @@ const env: PreviewEnv = {
   author: { name: "Paulo" },
   createdAt: "2h ago",
   services: [
-    { name: "api", url: "https://pr-142-api.preview.usetheo.dev", status: "live" },
-    { name: "web", url: "https://pr-142-web.preview.usetheo.dev", status: "live" },
+    { name: "api", url: "https://pr-142-api.preview.getloopscale.com", status: "live" },
+    { name: "web", url: "https://pr-142-web.preview.getloopscale.com", status: "live" },
     { name: "worker", status: "building" },
   ],
 };
@@ -26,8 +26,8 @@ const envFailed: PreviewEnv = {
   prTitle: "refactor: api middleware consolidation",
   branch: "feature/middleware",
   services: [
-    { name: "api", url: "https://pr-138-api.preview.usetheo.dev", status: "failed" },
-    { name: "web", url: "https://pr-138-web.preview.usetheo.dev", status: "cancelled" },
+    { name: "api", url: "https://pr-138-api.preview.getloopscale.com", status: "failed" },
+    { name: "web", url: "https://pr-138-web.preview.getloopscale.com", status: "cancelled" },
   ],
 };
 

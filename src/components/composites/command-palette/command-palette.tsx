@@ -42,7 +42,7 @@ const defaultEmpty = "No results.";
 /**
  * CommandPalette — Cmd+K-style global launcher with full keyboard navigation.
  *
- * Built on `cmdk` (the de-facto shadcn pattern) + Theo Dialog. Provides
+ * Built on `cmdk` (the de-facto shadcn pattern) + the Dialog primitive. Provides
  * out-of-the-box: ArrowUp/ArrowDown navigation, Enter selection, Escape close,
  * Home/End, active-item highlight via `data-selected`, and fuzzy ranking.
  *

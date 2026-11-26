@@ -11,7 +11,7 @@ export const NoProjects: Story = () => (
     icon={Rocket}
     eyebrow="No projects yet"
     title="Forge your first deployment"
-    description="Connect a GitHub repo to deploy on every push. Theo handles previews, secrets, and rollback for you."
+    description="Connect a GitHub repo to deploy on every push. LoopZero handles previews, secrets, and rollback for you."
     action={
       <Button>
         <Plus /> New project
@@ -25,6 +25,6 @@ export const NoMessages: Story = () => (
     className="max-w-xl"
     icon={Inbox}
     title="Start a conversation"
-    description="Ask Theo to scaffold a feature, review a PR, or explain part of the codebase."
+    description="Ask LoopZero to scaffold a feature, review a PR, or explain part of the codebase."
   />
 );

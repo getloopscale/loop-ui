@@ -5,18 +5,18 @@ export default { title: "Composites / Display / CodeBlock" };
 
 export const SingleCommand: Story = () => (
   <div className="w-96">
-    <CodeBlock code="theo deploy" terminal copyable />
+    <CodeBlock code="loopzero deploy" terminal copyable />
   </div>
 );
 
 export const MultiLine: Story = () => (
   <div className="w-96">
     <CodeBlock
-      code={`# Install theo CLI
-brew install usetheo/tap/theo
-theo login
-theo init my-app
-theo deploy`}
+      code={`# Install loopzero CLI
+brew install getloopscale/tap/loopzero
+loopzero login
+loopzero init my-app
+loopzero deploy`}
       terminal
       copyable
     />

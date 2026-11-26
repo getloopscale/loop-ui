@@ -21,7 +21,7 @@ export interface EnvVar {
   masked?: boolean;
   scope?: EnvScope;
   /**
-   * Read-only marker (e.g. system-managed vars like THEO_DEPLOY_ID).
+   * Read-only marker (e.g. system-managed vars like LOOPZERO_DEPLOY_ID).
    */
   readonly?: boolean;
 }
@@ -155,7 +155,7 @@ function Row({ entry, onRemove }: RowProps) {
         // fail-safe (user can still copy manually).
         if (isDev()) {
           // biome-ignore lint/suspicious/noConsole: dev-only clipboard diagnostic (T7.6)
-          console.warn("[@usetheo/ui] EnvVarEditor clipboard write failed:", err);
+          console.warn("[@loopscale/ui] EnvVarEditor clipboard write failed:", err);
         }
       });
     }

@@ -54,7 +54,7 @@ const SKIPS = new Set<string>([
  *     each instance declares the same landmark role.
  *   - empty-state stories for menus / lists fire `aria-required-children`
  *     (e.g. `MentionMenu / Empty`) — semantic state, not a bug.
- *   - Theo Code Shell screen story is the full app shell using Ladle-only
+ *   - Code Shell screen story is the full app shell using Ladle-only
  *     hooks (DarkModeToggle, ThemeIconPicker) that crash outside Ladle's
  *     runtime; happy-dom is not the right environment.
  */
@@ -77,9 +77,9 @@ const STORY_SKIPS = new Set<string>([
   // removed.
   // Full-app screen pulling Ladle runtime APIs (DarkModeToggle, ThemeIconPicker
   // hit `useTheme` outside the screen's own ThemeProvider).
-  "Screens / Theo Code Shell › Default",
-  "Screens / Theo Code Shell › StartingInChat",
-  "Screens / Theo Code Shell › StartingInInfra",
+  "Screens / Code Shell › Default",
+  "Screens / Code Shell › StartingInChat",
+  "Screens / Code Shell › StartingInInfra",
 ]);
 
 /**

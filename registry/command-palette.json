@@ -3,7 +3,7 @@
   "name": "command-palette",
   "type": "registry:ui",
   "title": "CommandPalette",
-  "description": "Cmd+K-style global launcher with arrow-key navigation, fuzzy ranking, and Enter/Escape behavior — built on cmdk + Theo Dialog.",
+  "description": "Cmd+K-style global launcher with arrow-key navigation, fuzzy ranking, and Enter/Escape behavior — built on cmdk + the Dialog primitive.",
   "dependencies": ["cmdk", "lucide-react"],
   "registryDependencies": ["cn", "dialog", "tailwind-preset", "types"],
   "files": [

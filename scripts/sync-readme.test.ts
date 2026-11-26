@@ -4,7 +4,7 @@
  * Regression: usetheokit/theokit-ui#73.
  *
  * The README claimed 54 components (39 primitives + 15 composites) while 87 shipped, and listed
- * none of them by name. The cost landed on a consumer, not on us: someone building on the Theo
+ * none of them by name. The cost landed on a consumer, not on us: someone building on the LoopScale
  * stack hand-wrote a sidebar, a data table, form controls and empty states that were already in
  * this package, because nothing here told them what was inside.
  *

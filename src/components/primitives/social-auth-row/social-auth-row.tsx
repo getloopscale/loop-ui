@@ -22,7 +22,7 @@ interface SocialAuthRowProps extends Omit<HTMLAttributes<HTMLDivElement>, "onSel
 /**
  * SocialAuthRow — row of OAuth provider buttons.
  *
- * Stateless; caller wires the redirect on `onSelect`. Buttons share Theo button
+ * Stateless; caller wires the redirect on `onSelect`. Buttons share the LoopScale button
  * styling but with provider icon prominently on the left.
  */
 const SocialAuthRow = forwardRef<HTMLDivElement, SocialAuthRowProps>(

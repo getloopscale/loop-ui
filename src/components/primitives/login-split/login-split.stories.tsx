@@ -6,7 +6,7 @@ export default { title: "Primitives / Layout / LoginSplit" };
 export const Shell: Story = () => (
   <div className="-m-12 h-[700px] overflow-hidden">
     <LoginSplit
-      footer="© 2026 Theo. Forged for builders."
+      footer="© 2026 LoopScale. Forged for builders."
       left={
         <div className="grid gap-4 text-center">
           <h2 className="font-display text-display-md tracking-tight">Left pane slot</h2>

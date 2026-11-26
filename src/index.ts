@@ -1,4 +1,4 @@
-// @usetheo/ui barrel — seeded from theo-ui (pivot M-B). 54 non-AI components + Violet Forge foundation.
+// @loopscale/ui barrel — seeded from loopscale-ui (pivot M-B). 54 non-AI components + Violet Forge foundation.
 
 export { cn } from "./lib/cn.js";
 export {

@@ -6,9 +6,9 @@
   "description": "Accessible <time> primitive with relative/absolute/both formats, auto-refresh interval (default 60s, 0 disables), native title tooltip with absolute time, and aria-label that always carries the full date. Built on Intl.RelativeTimeFormat (zero deps). value accepts ISO string, Date, or Unix ms (NOT seconds). Invalid date renders empty element; invalid locale falls back to default with dev warning.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/env.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/env.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

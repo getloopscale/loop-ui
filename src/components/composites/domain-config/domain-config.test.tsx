@@ -11,7 +11,7 @@ const domains: Domain[] = [
     hostname: "staging.acme.com",
     status: "pending",
     tls: false,
-    verificationRecord: { type: "TXT", name: "_theo.staging", value: "theo-verify=abc123" },
+    verificationRecord: { type: "TXT", name: "_loopzero.staging", value: "loopzero-verify=abc123" },
   },
 ];
 
@@ -27,8 +27,8 @@ describe("DomainConfig", () => {
     render(<DomainConfig domains={domains} />);
     expect(screen.getByText("Add this DNS record to verify")).toBeInTheDocument();
     expect(screen.getByText("TXT")).toBeInTheDocument();
-    expect(screen.getByText("_theo.staging")).toBeInTheDocument();
-    expect(screen.getByText("theo-verify=abc123")).toBeInTheDocument();
+    expect(screen.getByText("_loopzero.staging")).toBeInTheDocument();
+    expect(screen.getByText("loopzero-verify=abc123")).toBeInTheDocument();
   });
 
   it("marks primary domain with badge", () => {

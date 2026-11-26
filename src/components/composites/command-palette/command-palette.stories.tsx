@@ -19,7 +19,7 @@ export const Default: Story = () => {
           {
             id: "deploy",
             label: "Deploy production",
-            hint: "theo deploy --env production",
+            hint: "loopzero deploy --env production",
             icon: Rocket,
             group: "Actions",
             searchable: "deploy production",
@@ -27,7 +27,7 @@ export const Default: Story = () => {
           {
             id: "rollback",
             label: "Roll back to previous",
-            hint: "theo rollback",
+            hint: "loopzero rollback",
             icon: GitBranch,
             group: "Actions",
             searchable: "rollback revert",

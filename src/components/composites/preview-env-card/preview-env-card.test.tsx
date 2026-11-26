@@ -10,8 +10,8 @@ const env: PreviewEnv = {
   author: { name: "Paulo" },
   createdAt: "2h ago",
   services: [
-    { name: "api", url: "https://pr-142-api.preview.usetheo.dev", status: "live" },
-    { name: "web", url: "https://pr-142-web.preview.usetheo.dev", status: "live" },
+    { name: "api", url: "https://pr-142-api.preview.getloopscale.com", status: "live" },
+    { name: "web", url: "https://pr-142-web.preview.getloopscale.com", status: "live" },
     { name: "worker", status: "building" },
   ],
 };
@@ -35,7 +35,7 @@ describe("PreviewEnvCard", () => {
     expect(screen.getByText("api")).toBeInTheDocument();
     expect(screen.getByText("web")).toBeInTheDocument();
     expect(screen.getByText("worker")).toBeInTheDocument();
-    expect(screen.getByText("pr-142-api.preview.usetheo.dev")).toBeInTheDocument();
+    expect(screen.getByText("pr-142-api.preview.getloopscale.com")).toBeInTheDocument();
     expect(screen.getByText("internal")).toBeInTheDocument();
     expect(screen.getAllByText("Live").length).toBeGreaterThanOrEqual(2);
     expect(screen.getByText("Building")).toBeInTheDocument();

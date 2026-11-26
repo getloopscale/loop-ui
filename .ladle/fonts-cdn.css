@@ -1,4 +1,4 @@
-/* Theo UI — font loading via Google Fonts CDN (opt-in).
+/* LoopScale UI — font loading via Google Fonts CDN (opt-in).
  *
  * Use this entrypoint instead of `@theokit/ui/fonts.css` if you prefer to
  * fetch Geist + Geist Mono from `fonts.googleapis.com` rather than ship the

@@ -319,7 +319,7 @@ describe("TrendChart — barrel", () => {
 });
 
 /**
- * M146 — the chart let you read neither the WHEN nor the HOW MUCH (`usetheodev/usetheo-ui#17`).
+ * M146 — the chart let you read neither the WHEN nor the HOW MUCH (`getloopscale/ui#17`).
  *
  * The SVG had exactly two `<text>` nodes, both on the Y axis, and the accessible table numbered
  * its rows (`Point 1, 2, 3…`). On a chart labelled "Cost per day", no date appeared — the operator

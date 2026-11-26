@@ -4,7 +4,7 @@ import { cn } from "../../../lib/cn.js";
 
 /**
  * TrendChart — multi-series time-trend chart in pure SVG (no chart lib —
- * keeps the registry copy-pasteable). Promoted from the theo-cloud dashboard
+ * keeps the registry copy-pasteable). Promoted from the loopzero-cloud dashboard
  * (production since M51, with the M76 sparse-marker and M90 ragged-series
  * lessons pinned by tests).
  *

@@ -23,8 +23,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-      "@usetheo/ui": ["./src/index.ts"],
-      "@usetheo/ui/*": ["./src/*"]
+      "@loopscale/ui": ["./src/index.ts"],
+      "@loopscale/ui/*": ["./src/*"]
     }
   },
   "include": [

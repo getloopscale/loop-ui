@@ -17,8 +17,8 @@ const initial: Domain[] = [
     tls: false,
     verificationRecord: {
       type: "TXT",
-      name: "_theo.staging.acme.com",
-      value: "theo-verify=8d9c204a2e93011f3b8e2ff0021ce",
+      name: "_loopzero.staging.acme.com",
+      value: "loopzero-verify=8d9c204a2e93011f3b8e2ff0021ce",
     },
   },
 ];
@@ -39,8 +39,8 @@ export const Interactive: Story = () => {
               tls: false,
               verificationRecord: {
                 type: "TXT",
-                name: `_theo.${hostname}`,
-                value: `theo-verify=${Math.random().toString(36).slice(2, 12)}`,
+                name: `_loopzero.${hostname}`,
+                value: `loopzero-verify=${Math.random().toString(36).slice(2, 12)}`,
               },
             },
           ])

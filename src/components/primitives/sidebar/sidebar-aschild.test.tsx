@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { Sidebar } from "./sidebar.js";
 
 /**
- * usetheodev/usetheo-ui#31 — `Sidebar.Item` can render a router link.
+ * getloopscale/ui#31 — `Sidebar.Item` can render a router link.
  *
  * `as="a" href={to}` plus an `onClick` calling `navigate()` works and is what consumers write, but
  * the router never sees the link, so it cannot prefetch it. On a sidebar — where hover precedes

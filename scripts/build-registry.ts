@@ -8,9 +8,9 @@
  *
  * The CLI consumer points shadcn at a URL serving registry/r/<name>.json.
  * Functional URL (live on every push to main via deploy-registry.yml):
- *   npx shadcn@latest add https://usetheodev.github.io/usetheo-ui/r/button.json
+ *   npx shadcn@latest add https://getloopscale.github.io/ui/r/button.json
  * Branded URL pending DNS CNAME:
- *   npx shadcn@latest add https://ui.usetheo.dev/r/button.json
+ *   npx shadcn@latest add https://ui.getloopscale.com/r/button.json
  *
  * Reference: https://ui.shadcn.com/docs/registry
  */
@@ -160,7 +160,7 @@ async function main(): Promise<void> {
   // "The item at https://ui.shadcn.com/r/styles/default/cn.json was not found"
   // because our items declared `"registryDependencies": ["cn"]` and shadcn
   // resolves bare names against its own registry first.
-  const REGISTRY_BASE_URL = "https://usetheodev.github.io/usetheo-ui/r";
+  const REGISTRY_BASE_URL = "https://getloopscale.github.io/ui/r";
   const ownRegistryNames = new Set(descriptors.map(({ descriptor }) => descriptor.name));
   function rewriteRegistryDeps(deps: string[] | undefined): string[] | undefined {
     if (!deps) return undefined;
@@ -212,8 +212,8 @@ async function main(): Promise<void> {
   // tooling check for it before attempting an install.
   const index = {
     $schema: "https://ui.shadcn.com/schema/registry.json",
-    name: "theo-ui",
-    homepage: "https://usetheo.dev",
+    name: "loopscale-ui",
+    homepage: "https://getloopscale.com",
     metadata: {
       requires: {
         // The shadcn-standard path alias. Consumers must have this mapped

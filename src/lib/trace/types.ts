@@ -2,7 +2,7 @@
  * Shared data contracts for the trace-native component family (M8).
  *
  * `TraceSpan` is the intersection of three real shapes (phoenix ISpanItem,
- * langfuse observation, theo-lens TraceSpanNode — blueprint Corner 2): the
+ * langfuse observation, looptrace TraceSpanNode — blueprint Corner 2): the
  * smallest type every kit component consumes. Transport fields (tRPC/GraphQL)
  * are deliberately absent. Timestamps accept unix-ns (bigint or numeric
  * string) or an ISO-8601 string — `toNs()` normalizes at the boundary.
@@ -78,7 +78,7 @@ export interface TranscriptRowStats {
   outputTokens: number;
   /**
    * Per-span own cost. `undefined` when the span has no individually-computed cost — the feed
-   * renders `—` then, never a fabricated `$0.0000` (M52 / theo-lens#71 Finding 3). A real computed
+   * renders `—` then, never a fabricated `$0.0000` (M52 / looptrace#71 Finding 3). A real computed
    * cost is a positive number.
    */
   costUsd: number | undefined;

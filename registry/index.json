@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "theo-ui",
-  "homepage": "https://usetheo.dev",
+  "name": "loopscale-ui",
+  "homepage": "https://getloopscale.com",
   "metadata": {
     "requires": {
       "tsconfigPathAlias": {
@@ -118,7 +118,7 @@
       "name": "command-palette",
       "type": "registry:ui",
       "title": "CommandPalette",
-      "description": "Cmd+K-style global launcher with arrow-key navigation, fuzzy ranking, and Enter/Escape behavior — built on cmdk + Theo Dialog."
+      "description": "Cmd+K-style global launcher with arrow-key navigation, fuzzy ranking, and Enter/Escape behavior — built on cmdk + the Dialog primitive."
     },
     {
       "name": "comment-thread",
@@ -513,8 +513,8 @@
     {
       "name": "tailwind-preset",
       "type": "registry:lib",
-      "title": "Theo UI Tailwind preset",
-      "description": "Type scale, fontFamily, colors and motion tokens consumed by every Theo UI component. Add to tailwind.config.ts#presets before installing any other component."
+      "title": "LoopScale UI Tailwind preset",
+      "description": "Type scale, fontFamily, colors and motion tokens consumed by every LoopScale UI component. Add to tailwind.config.ts#presets before installing any other component."
     },
     {
       "name": "task-header",
@@ -525,7 +525,7 @@
     {
       "name": "task-types",
       "type": "registry:lib",
-      "title": "Theo UI task types",
+      "title": "LoopScale UI task types",
       "description": "Shared TypeScript types for task plans, steps, and progress state."
     },
     {
@@ -591,8 +591,8 @@
     {
       "name": "types",
       "type": "registry:lib",
-      "title": "Theo UI shared types",
-      "description": "Shared TypeScript helper types (IconComponent, etc.) used across Theo UI."
+      "title": "LoopScale UI shared types",
+      "description": "Shared TypeScript helper types (IconComponent, etc.) used across LoopScale UI."
     }
   ]
 }

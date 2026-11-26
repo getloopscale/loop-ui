@@ -66,7 +66,7 @@ interface PreviewEnvCardProps extends HTMLAttributes<HTMLDivElement> {
 /**
  * PreviewEnvCard — preview environment card surfacing all services from one PR.
  *
- * Theo's killer feature: full-stack preview environments. The card shows:
+ * LoopZero's killer feature: full-stack preview environments. The card shows:
  *   - PR number + title at the top
  *   - branch + author in the metadata row
  *   - one badge per service with its own status + URL

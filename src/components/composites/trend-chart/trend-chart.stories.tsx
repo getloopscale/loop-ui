@@ -17,7 +17,7 @@ const chartStory = (props: TrendChartProps): Story => {
   return Rendered;
 };
 
-/** The theo-rag analytics case: p50/p95 retrieval latency per window (DoD b3). */
+/** The looprag analytics case: p50/p95 retrieval latency per window (DoD b3). */
 export const RagLatency = chartStory({
   title: "Retrieval latency",
   valueFormatter: (v) => `${v}ms`,

@@ -6,10 +6,10 @@
   "description": "Controlled multi-value tag editor. Renders one removable chip per tag (Badge + per-tag x button) plus a text input to add a new tag on Enter. Fully controlled (value: string[] + onChange). Dedup is built-in: adding an existing or empty/whitespace tag is a no-op; new tags are trimmed. disabled blocks add and remove. Optional suggestions power a native datalist (zero-dep autocomplete). Composes Input + Badge — no Combobox, no new dependency.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/input.json",
-    "https://usetheodev.github.io/usetheo-ui/r/badge.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/input.json",
+    "https://getloopscale.github.io/ui/r/badge.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

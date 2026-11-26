@@ -6,9 +6,9 @@
   "description": "p50/p95/p99 over time as shaded bands (not three flat lines) in pure SVG. The p50–p95 and p95–p99 spans render as filled areas + a p50 reference line, so the spread reads at a glance. Honest empty state; sr-only table for a11y parity. Reuses linScale/niceMax/seriesPath from TrendChart.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/trend-chart.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/trend-chart.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

@@ -23,7 +23,7 @@ describe("CodeBlock", () => {
   });
 
   it("adds '$ ' prefix per visible line when terminal=true", () => {
-    const { container } = render(<CodeBlock code={"theo deploy\ntheo status"} terminal />);
+    const { container } = render(<CodeBlock code={"loopzero deploy\nloopzero status"} terminal />);
     const prefixSpans = container.querySelectorAll("span.select-none");
     expect(prefixSpans.length).toBeGreaterThanOrEqual(2);
     for (const span of prefixSpans) {
@@ -33,15 +33,15 @@ describe("CodeBlock", () => {
 
   it("renders CopyButton when copyable=true", () => {
     stubClipboard();
-    render(<CodeBlock code="theo deploy" copyable />);
+    render(<CodeBlock code="loopzero deploy" copyable />);
     expect(screen.getByRole("button", { name: /copy code/i })).toBeInTheDocument();
   });
 
   it("copy uses raw code (no terminal '$ ' prefix in clipboard value)", async () => {
     const writeText = stubClipboard();
-    render(<CodeBlock code="theo deploy" terminal copyable />);
+    render(<CodeBlock code="loopzero deploy" terminal copyable />);
     fireEvent.click(screen.getByRole("button", { name: /copy code/i }));
-    await waitFor(() => expect(writeText).toHaveBeenCalledWith("theo deploy"));
+    await waitFor(() => expect(writeText).toHaveBeenCalledWith("loopzero deploy"));
   });
 
   it("preserves long line with horizontal scroll", () => {
@@ -62,7 +62,9 @@ describe("CodeBlock", () => {
 
   it("has no axe violations", async () => {
     stubClipboard();
-    const { container } = render(<CodeBlock code="theo deploy" terminal copyable caption=".cmd" />);
+    const { container } = render(
+      <CodeBlock code="loopzero deploy" terminal copyable caption=".cmd" />,
+    );
     expect(await axe(container)).toHaveNoViolations();
   });
 });

@@ -5,9 +5,9 @@
   "title": "EmptyState",
   "description": "Visual placeholder for empty lists / first-run screens.",
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json",
-    "https://usetheodev.github.io/usetheo-ui/r/types.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json",
+    "https://getloopscale.github.io/ui/r/types.json"
   ],
   "files": [
     {

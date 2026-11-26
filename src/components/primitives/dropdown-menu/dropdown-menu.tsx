@@ -20,7 +20,7 @@ import { cn } from "../../../lib/cn.js";
  *
  * The primitive consolidates 5 prior direct-Radix usages
  * (`model-selector`, `intent-selector`, `agent-profile`,
- * `theme-switcher`, `theo-code-shell`) under a single styled
+ * `theme-switcher`, `code-shell`) under a single styled
  * wrapper so consumers get consistent visuals + the design tokens.
  *
  * a11y note for tests: Radix's focus-guard spans intentionally

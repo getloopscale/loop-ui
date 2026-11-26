@@ -261,7 +261,7 @@ async function main(): Promise<void> {
     }
   }
 
-  const fixtureRoot = await mkdtemp(join(tmpdir(), "theo-registry-"));
+  const fixtureRoot = await mkdtemp(join(tmpdir(), "loopscale-registry-"));
   try {
     for (const descriptor of descriptors.values()) {
       const built = await readJson<RegistryDescriptor>(join(OUT_DIR, `${descriptor.name}.json`));

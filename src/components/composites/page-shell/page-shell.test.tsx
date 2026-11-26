@@ -58,11 +58,14 @@ describe("PageShell — content states", () => {
 
   it("error renders docs link when provided", () => {
     render(
-      <PageShell title="x" error={{ message: "Issue", docsHref: "https://docs.usetheo.dev" }} />,
+      <PageShell
+        title="x"
+        error={{ message: "Issue", docsHref: "https://docs.getloopscale.com" }}
+      />,
     );
     expect(screen.getByRole("link", { name: "View docs" })).toHaveAttribute(
       "href",
-      "https://docs.usetheo.dev",
+      "https://docs.getloopscale.com",
     );
   });
 

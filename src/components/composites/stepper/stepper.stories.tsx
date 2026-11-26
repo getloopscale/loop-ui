@@ -51,7 +51,7 @@ export const BuildPipelineFailed = stepperStory("Build pipeline", [
   { id: "succeeded", label: "Live", status: "pending" },
 ]);
 
-/** The theo-rag case: an ingest pipeline with per-step timestamps (DoD b2). */
+/** The looprag case: an ingest pipeline with per-step timestamps (DoD b2). */
 export const IngestPipeline = stepperStory("Document ingest", [
   {
     id: "partition",

@@ -6,11 +6,11 @@
   "description": "Collapsible group showing aggregate stats over a list of annotation values for one AnnotationConfig. Reuses the AnnotationConfig contract and dispatches on config.type: continuous -> mean of the finite numeric values + count; categorical -> count per option label + total count; freeform -> count of non-empty values. Controlled and pure -- the consumer owns values; this component only summarizes. Native details/summary for zero-JS collapsibility; composes Card/Badge.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/annotation-input.json",
-    "https://usetheodev.github.io/usetheo-ui/r/badge.json",
-    "https://usetheodev.github.io/usetheo-ui/r/card.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/annotation-input.json",
+    "https://getloopscale.github.io/ui/r/badge.json",
+    "https://getloopscale.github.io/ui/r/card.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {
