@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.37.0
+
+### Minor Changes
+
+- 6bfe486: The package is now published as `@getloopscale/ui`.
+
+  Install `@getloopscale/ui` and change every import and stylesheet path to the new name; the exports and
+  subpaths are otherwise the same. Three names a consumer may have written by hand changed with it:
+
+  - the control sizing variables are `--loopscale-control-h` and `--loopscale-control-px`;
+  - the Tailwind preset is exported as `loopscaleUIPreset`;
+  - the copy-paste registry is served from `https://getloopscale.github.io/ui/r/`.
+
+  The previous names are no longer read, so an app that overrides the control height has to rename
+  the variable when it upgrades.
+
 ## 0.36.0
 
 ### Minor Changes
@@ -41,13 +57,13 @@
 
   The seed that created this repository brought `src/styles/tailwind-preset.ts` across but not the CSS
   pipeline around it, so from 0.14.0 the tarball contained zero `.css` files while consumers kept
-  importing `@loopscale/ui/preset.css`, `/components.css` and `/fonts-cdn.css`. A clean `vite build`
+  importing `@getloopscale/ui/preset.css`, `/components.css` and `/fonts-cdn.css`. A clean `vite build`
   against those versions fails to resolve them; the deployed dashboard only kept working because it had
   been built back in the 0.13.x era.
 
   `components.css` is COMPILED rather than restored — the Tailwind v4 CLI runs against
   `src/styles/components-entry.css`, which scans this repo's own `src/`, so the shipped utility rules
-  match the classes the components reference today. The static stylesheets come from `@loopscale/ui@0.13.2`,
+  match the classes the components reference today. The static stylesheets come from `@getloopscale/ui@0.13.2`,
   the last release that published them; every token the current preset references is declared there.
 
   The library pre-compiles those utilities instead of leaving them to the consumer's Tailwind because
@@ -122,7 +138,7 @@
   - `publishConfig` com `access: public` e `provenance: true`, para que o artefacto publicado leve
     atestação de origem.
 
-All notable changes to `@loopscale/ui` are documented in this file.
+All notable changes to `@getloopscale/ui` are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).

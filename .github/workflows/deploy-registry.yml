@@ -65,7 +65,7 @@ jobs:
           <html lang="en">
           <head>
             <meta charset="utf-8" />
-            <title>@loopscale/ui — registry</title>
+            <title>@getloopscale/ui — registry</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <style>
               body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 40px auto; max-width: 720px; padding: 0 20px; color: #111; }
@@ -74,13 +74,13 @@ jobs:
             </style>
           </head>
           <body>
-            <h1>@loopscale/ui — registry</h1>
-            <p>shadcn-compatible component registry for <a href="https://github.com/getloopscale/ui">@loopscale/ui</a> (the generic + cloud-ops layer that <a href="https://www.npmjs.com/package/@theokit/ui">@theokit/ui</a> builds on).</p>
+            <h1>@getloopscale/ui — registry</h1>
+            <p>shadcn-compatible component registry for <a href="https://github.com/getloopscale/ui">@getloopscale/ui</a> (the generic + cloud-ops layer that <a href="https://www.npmjs.com/package/@theokit/ui">@theokit/ui</a> builds on).</p>
             <p>Install any component:</p>
             <pre><code>npx shadcn@latest add https://getloopscale.github.io/ui/r/button.json</code></pre>
             <p>See the <a href="index.json">catalog index</a> for all items.</p>
             <hr />
-            <p>npm: <a href="https://www.npmjs.com/package/@loopscale/ui"><code>pnpm add @loopscale/ui</code></a></p>
+            <p>npm: <a href="https://www.npmjs.com/package/@getloopscale/ui"><code>pnpm add @getloopscale/ui</code></a></p>
           </body>
           </html>
           HTML
