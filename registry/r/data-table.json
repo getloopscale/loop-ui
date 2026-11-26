@@ -9,14 +9,14 @@
     "@tanstack/react-virtual"
   ],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/env.json",
-    "https://usetheodev.github.io/usetheo-ui/r/table.json",
-    "https://usetheodev.github.io/usetheo-ui/r/pagination.json",
-    "https://usetheodev.github.io/usetheo-ui/r/skeleton.json",
-    "https://usetheodev.github.io/usetheo-ui/r/empty-state.json",
-    "https://usetheodev.github.io/usetheo-ui/r/dropdown-menu.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/env.json",
+    "https://getloopscale.github.io/ui/r/table.json",
+    "https://getloopscale.github.io/ui/r/pagination.json",
+    "https://getloopscale.github.io/ui/r/skeleton.json",
+    "https://getloopscale.github.io/ui/r/empty-state.json",
+    "https://getloopscale.github.io/ui/r/dropdown-menu.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

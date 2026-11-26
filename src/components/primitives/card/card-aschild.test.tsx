@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { Card } from "./card.js";
 
 /**
- * usetheodev/usetheo-ui#32 — the whole card can be a control.
+ * getloopscale/ui#32 — the whole card can be a control.
  *
  * Choice grids, plan pickers and agent selectors all want a clickable card, and both ways to build
  * one without this were bad: a `<button>` wrapped AROUND a `<Card>` is invalid markup (a button

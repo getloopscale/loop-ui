@@ -82,7 +82,7 @@ export const EmptyState: Story = () => (
 );
 
 /**
- * Query playground — the composition the theo-memory (recall) and theo-rag (retrieval)
+ * Query playground — the composition the loopmem (recall) and looprag (retrieval)
  * products assemble: topK + threshold + collection picker.
  * Executable evidence for M1's DoD bullet 3 (axe-validated in a test).
  */

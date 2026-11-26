@@ -27,7 +27,7 @@ export const Range: Story = () => (
   </Row>
 );
 
-/** Playground do theo-memory/theo-rag: topK 1-100 (step 1) e threshold 0-1 (step 0.05). */
+/** Playground do loopmem/looprag: topK 1-100 (step 1) e threshold 0-1 (step 0.05). */
 export const WithMarks: Story = () => (
   <div className="grid max-w-md gap-8">
     <Row label="Top K (1-100)">

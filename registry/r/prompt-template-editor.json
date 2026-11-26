@@ -6,10 +6,10 @@
   "description": "Controlled prompt-template editor: a Textarea plus a simple hint area listing available variables and which are used vs missing. The hint is a lightweight overlay over the plain textarea (no CodeMirror / editor library) — variable detection uses the pure extractVars helper that recognizes both mustache ({{name}}) and f-string ({name}) placeholders, deduped in order. 'Used' = the variable appears in the value; 'missing' = used in the value but not declared. Composes Textarea/Badge — zero new dependency.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/textarea.json",
-    "https://usetheodev.github.io/usetheo-ui/r/badge.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/textarea.json",
+    "https://getloopscale.github.io/ui/r/badge.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

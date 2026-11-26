@@ -6,10 +6,10 @@
   "description": "Distribution of numeric values as pure-SVG bars (no chart lib). Accepts pre-computed bins OR raw values + binCount (binned client-side via computeHistogram). Bar height scaled via niceMax; honest empty state; sr-only table for a11y parity. Reuses linScale/niceMax from TrendChart.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/chart.json",
-    "https://usetheodev.github.io/usetheo-ui/r/trend-chart.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/chart.json",
+    "https://getloopscale.github.io/ui/r/trend-chart.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

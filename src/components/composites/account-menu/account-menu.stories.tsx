@@ -22,7 +22,7 @@ export const Static: Story = () => (
 
 export const NoAvatar: Story = () => (
   <div className="w-72 rounded-lg border border-border/40 bg-card">
-    <AccountMenu name="Theo" plan="enterprise" onClick={() => undefined} />
+    <AccountMenu name="LoopScale" plan="enterprise" onClick={() => undefined} />
   </div>
 );
 

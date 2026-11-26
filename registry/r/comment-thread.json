@@ -6,12 +6,12 @@
   "description": "Controlled comment thread + composer. Renders an ordered list of comments (Avatar + author + Timestamp + body) followed by a composer (Textarea + submit Button). The list is controlled via comments; only the composer draft is local state. A non-empty trimmed body calls onSubmit(body) and clears the draft; empty/whitespace never submits. No comments -> honest empty state, composer still shows. Composes Avatar/Textarea/Button/Timestamp — zero new dependency.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/avatar.json",
-    "https://usetheodev.github.io/usetheo-ui/r/textarea.json",
-    "https://usetheodev.github.io/usetheo-ui/r/button.json",
-    "https://usetheodev.github.io/usetheo-ui/r/timestamp.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/avatar.json",
+    "https://getloopscale.github.io/ui/r/textarea.json",
+    "https://getloopscale.github.io/ui/r/button.json",
+    "https://getloopscale.github.io/ui/r/timestamp.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

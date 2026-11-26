@@ -9,7 +9,7 @@ export default {
 };
 
 /**
- * Accept from the real case (theo-rag ingest — the canonical mime-from-name map):
+ * Accept from the real case (looprag ingest — the canonical mime-from-name map):
  * pdf, docx/pptx/xlsx, csv, txt/md/html and png/jpg images.
  *
  * Cross-browser manual verification matrix (ROADMAP § M5, risk #2):
@@ -30,7 +30,7 @@ const INGEST_ACCEPT: Record<string, string[]> = {
   "image/jpeg": [".jpg", ".jpeg"],
 };
 
-/** The theo-rag case: document ingest + composition with Progress (DoD b2). */
+/** The looprag case: document ingest + composition with Progress (DoD b2). */
 export const IngestUpload: Story = () => {
   const [selected, setSelected] = useState<string[]>([]);
   return (

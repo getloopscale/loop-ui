@@ -8,7 +8,7 @@ import { cn } from "../../../lib/cn.js";
  * Button — primitive action element in the Violet Forge design system.
  *
  * Variants:
- *   - primary    Theo violet fill, glow on hover (signature)
+ *   - primary    LoopScale violet fill, glow on hover (signature)
  *   - secondary  surface with hairline border
  *   - accent     burnt-sienna fill, celebratory actions
  *   - ghost      transparent, hover lifts surface
@@ -74,10 +74,10 @@ const buttonVariants = cva(
         sm: "h-8 px-3 text-body-sm",
         // md: tier adjustable via density (CSS var on :root). See D3 ADR of
         // faang-density-tightening plan. Default `comfortable` density makes
-        // this 36px (--theo-control-h: 2.25rem). sm and lg stay hardcoded.
-        md: "h-[var(--theo-control-h,2rem)] px-[var(--theo-control-px,0.75rem)] text-body-sm",
+        // this 36px (--loopscale-control-h: 2.25rem). sm and lg stay hardcoded.
+        md: "h-[var(--loopscale-control-h,2rem)] px-[var(--loopscale-control-px,0.75rem)] text-body-sm",
         lg: "h-11 px-4 text-body-md",
-        icon: "h-[var(--theo-control-h,2rem)] w-[var(--theo-control-h,2rem)] p-0",
+        icon: "h-[var(--loopscale-control-h,2rem)] w-[var(--loopscale-control-h,2rem)] p-0",
       },
     },
     defaultVariants: {

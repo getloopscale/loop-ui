@@ -10,7 +10,7 @@ const initial: EnvVar[] = [
   {
     id: "1",
     key: "DATABASE_URL",
-    value: "postgres://acme:hunter2@db.usetheo.dev:5432/acme", // trufflehog:ignore — fixture, not a live credential
+    value: "postgres://acme:hunter2@db.getloopscale.com:5432/acme", // trufflehog:ignore — fixture, not a live credential
     masked: true,
     scope: "production",
   },
@@ -25,13 +25,13 @@ const initial: EnvVar[] = [
   {
     id: "4",
     key: "REDIS_URL",
-    value: "redis://default:hunter3@redis.usetheo.dev:6379",
+    value: "redis://default:hunter3@redis.getloopscale.com:6379",
     masked: true,
     scope: "staging",
   },
   {
     id: "5",
-    key: "THEO_DEPLOY_ID",
+    key: "LOOPZERO_DEPLOY_ID",
     value: "dpl_8f3jka9dfsdfasdf",
     readonly: true,
     scope: "production",

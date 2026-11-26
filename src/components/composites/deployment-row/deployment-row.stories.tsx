@@ -36,7 +36,7 @@ const deployments: Deployment[] = [
     branch: "feature/migrations",
     commitSha: "a2e9301",
     commitMessage: "chore: bump postgres operator to 1.24",
-    author: { name: "Theo" },
+    author: { name: "LoopScale" },
     duration: "—",
     timeAgo: "8m ago",
   },

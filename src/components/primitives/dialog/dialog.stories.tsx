@@ -45,10 +45,11 @@ export const PermissionRequest: Story = () => (
     <Dialog.Content>
       <Dialog.Header>
         <Dialog.Title>
-          Allow Theo to modify files in <code className="text-primary">~/Downloads/captures</code>?
+          Allow LoopZero to modify files in{" "}
+          <code className="text-primary">~/Downloads/captures</code>?
         </Dialog.Title>
         <Dialog.Description>
-          Includes all files and subfolders. Theo will be able to read, edit and delete files
+          Includes all files and subfolders. LoopZero will be able to read, edit and delete files
           permanently, and may share contents with third-party tools it connects to.
         </Dialog.Description>
       </Dialog.Header>

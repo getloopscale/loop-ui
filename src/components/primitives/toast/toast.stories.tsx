@@ -28,7 +28,7 @@ function Trigger() {
           toast({
             variant: "success",
             title: "Deploy succeeded",
-            description: "Live at acme-api.usetheo.dev (24s).",
+            description: "Live at acme-api.getloopscale.com (24s).",
           })
         }
       >
@@ -40,7 +40,7 @@ function Trigger() {
           toast({
             variant: "warning",
             title: "Permission required",
-            description: "Theo wants to write to ~/Downloads/screenshots.",
+            description: "LoopZero wants to write to ~/Downloads/screenshots.",
             action: { label: "Allow", onClick: () => undefined },
           })
         }

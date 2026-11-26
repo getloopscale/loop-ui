@@ -6,7 +6,7 @@ import { type EnvVar, EnvVarEditor } from "./env-var-editor.js";
 const vars: EnvVar[] = [
   { id: "1", key: "DATABASE_URL", value: "postgres://u:p@h/db", masked: true, scope: "production" }, // trufflehog:ignore — fixture, not a live credential
   { id: "2", key: "LOG_LEVEL", value: "info", scope: "all" },
-  { id: "3", key: "THEO_DEPLOY_ID", value: "dpl_abcdef", readonly: true, scope: "production" },
+  { id: "3", key: "LOOPZERO_DEPLOY_ID", value: "dpl_abcdef", readonly: true, scope: "production" },
 ];
 
 describe("EnvVarEditor", () => {
@@ -14,7 +14,7 @@ describe("EnvVarEditor", () => {
     render(<EnvVarEditor vars={vars} />);
     expect(screen.getByText("DATABASE_URL")).toBeInTheDocument();
     expect(screen.getByText("LOG_LEVEL")).toBeInTheDocument();
-    expect(screen.getByText("THEO_DEPLOY_ID")).toBeInTheDocument();
+    expect(screen.getByText("LOOPZERO_DEPLOY_ID")).toBeInTheDocument();
   });
 
   it("masks secret values by default", () => {
@@ -40,7 +40,9 @@ describe("EnvVarEditor", () => {
 
   it("does not show remove button for readonly entries", () => {
     render(<EnvVarEditor vars={vars} onRemove={() => undefined} />);
-    expect(screen.queryByRole("button", { name: "Remove THEO_DEPLOY_ID" })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("button", { name: "Remove LOOPZERO_DEPLOY_ID" }),
+    ).not.toBeInTheDocument();
   });
 
   it("submits new variable via the add form", async () => {

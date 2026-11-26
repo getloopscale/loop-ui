@@ -32,7 +32,7 @@ export function spanCostUsd(span: TraceSpan): number {
  * parseable cost attribute — but returns `undefined` when the span has no individually-computed
  * cost (absent / non-numeric / ≤ 0). Distinct from `spanCostUsd` (which collapses to 0 for honest
  * `∑` badges): a per-span cost is "exists or doesn't", not a sum, so the absent case renders `—`
- * (em-dash) downstream instead of a fabricated `$0.0000` (M52 / theo-lens#71 Finding 3).
+ * (em-dash) downstream instead of a fabricated `$0.0000` (M52 / looptrace#71 Finding 3).
  */
 export function spanOwnCostUsd(span: TraceSpan): number | undefined {
   if (typeof span.costUsd === "number" && Number.isFinite(span.costUsd)) {

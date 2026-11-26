@@ -5,8 +5,8 @@
   "title": "DescriptionList",
   "description": "Semantic key/value pairs on native dl/dt/dd: vertical or horizontal (grid) layouts, dense mode, composable Item/Term/Detail subs.",
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

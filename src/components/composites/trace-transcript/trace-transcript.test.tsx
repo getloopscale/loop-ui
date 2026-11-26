@@ -29,7 +29,7 @@ describe("TraceTranscript", () => {
   });
 
   it("test_a_span_without_its_own_cost_shows_an_em_dash_not_zero", () => {
-    // M52 / theo-lens#71 Finding 3: a span with no individually-computed cost renders `—`
+    // M52 / looptrace#71 Finding 3: a span with no individually-computed cost renders `—`
     // (matching the Span I/O panel), never a misleading fabricated "$0.0000".
     const noCost: React.ComponentProps<typeof TraceTranscript>["root"] = {
       id: "x",

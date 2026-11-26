@@ -6,8 +6,8 @@
   "description": "Accessible progress bar primitive with intent variants (default, success, warning, destructive), 4 heights (h-1 / h-1.5 / h-2 / h-3), and an indeterminate animated state. Built on role=\"progressbar\" + ARIA semantics.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

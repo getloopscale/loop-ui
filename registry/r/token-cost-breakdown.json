@@ -6,8 +6,8 @@
   "description": "A dl breakdown of a request/span/trace token usage and USD cost: input, output, cache tokens, total, and cost. Controlled and pure. Honest zeros (M9 SessionSummary convention): a real 0 renders 0 / $0.0000; an absent field renders an em-dash; all-absent renders an honest empty state.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

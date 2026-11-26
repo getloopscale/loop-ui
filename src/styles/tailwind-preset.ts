@@ -1,5 +1,5 @@
 /**
- * Theo UI Tailwind preset — Violet Forge identity.
+ * LoopScale UI Tailwind preset — Violet Forge identity.
  *
  * Single source of truth for the design system's utility-level tokens:
  *   - colors mapped to CSS variables (HSL split via `hsl(var(--x) / <alpha>)`)
@@ -8,18 +8,18 @@
  *   - tailwindcss-animate plugin
  *
  * Consumed by:
- *   - `tailwind.config.ts` (this repo) via `presets: [theoUIPreset]`
+ *   - `tailwind.config.ts` (this repo) via `presets: [loopscaleUIPreset]`
  *   - registry/r/tailwind-preset.json (shipped to consumers via shadcn CLI)
  *
  * Consumers integrate as:
  *
  *   import type { Config } from "tailwindcss";
- *   import { theoUIPreset } from "./styles/tailwind-preset";
+ *   import { loopscaleUIPreset } from "./styles/tailwind-preset";
  *
  *   export default {
  *     darkMode: "class",
  *     content: ["./src/**\/*.{ts,tsx}"],
- *     presets: [theoUIPreset],
+ *     presets: [loopscaleUIPreset],
  *   } satisfies Config;
  *
  * Note: `darkMode` and `content` are NOT in the preset — they are consumer
@@ -35,7 +35,7 @@ import animate from "tailwindcss-animate";
 // Tailwind's `<alpha-value>` slot for opacity modifiers (e.g. `bg-primary/50`).
 const hsl = (token: string) => `oklch(from var(${token}) l c h / <alpha-value>)`;
 
-export const theoUIPreset: Partial<Config> = {
+export const loopscaleUIPreset: Partial<Config> = {
   theme: {
     container: {
       center: true,
@@ -124,7 +124,7 @@ export const theoUIPreset: Partial<Config> = {
        *
        * Three strict weights: 400 (body), 500 (UI), 600 (display/headings).
        * Letter-spacing scales with size — aggressive negative on display.
-       * Mirrors the Vercel/Geist vocabulary while keeping Theo's identity.
+       * Mirrors the Vercel/Geist vocabulary while keeping LoopZero's identity.
        */
       fontSize: {
         // Display tier — aggressive compression, content-led headlines

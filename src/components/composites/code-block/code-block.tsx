@@ -12,7 +12,7 @@ import { CopyButton } from "../../primitives/copy-button/index.js";
  * so consumers paste only the executable command.
  *
  * @example
- *   <CodeBlock code="theo deploy" terminal copyable />
+ *   <CodeBlock code="loopzero deploy" terminal copyable />
  *   <CodeBlock code={dotenv} caption=".env.local" copyable />
  *
  * `language` is reserved for future syntax highlighting (v1: ignored).

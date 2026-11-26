@@ -4,7 +4,7 @@
  *
  * The seed that created this repository brought `src/styles/tailwind-preset.ts` across but not the
  * CSS pipeline around it, so from 0.14.0 onwards the tarball shipped ZERO `.css` files while the
- * documented entrypoints (`@usetheo/ui/preset.css`, `/components.css`, `/styles.css`, …) stayed in
+ * documented entrypoints (`@loopscale/ui/preset.css`, `/components.css`, `/styles.css`, …) stayed in
  * the consumer's imports. A clean `vite build` against those versions fails to resolve them; the
  * deployed dashboard only worked because it had been built back in the 0.13.x era.
  *
@@ -20,7 +20,7 @@
  *   old tarball would be missing every class added since.
  *
  * Why the library pre-compiles instead of letting the consumer's Tailwind do it: `@source` globs do
- * not follow symlinks, and under pnpm `node_modules/@usetheo/ui` is one. The consumer-side pattern
+ * not follow symlinks, and under pnpm `node_modules/@loopscale/ui` is one. The consumer-side pattern
  * expands to zero files and every hover/focus/data-state variant goes unemitted.
  */
 
@@ -84,7 +84,7 @@ async function main(): Promise<void> {
   }
 
   // The woff2 files live at `dist/fonts/` because `fonts.css` refers to them as `./fonts/…` — the
-  // relative URL has to resolve inside the consumer's `node_modules/@usetheo/ui/dist/` tree.
+  // relative URL has to resolve inside the consumer's `node_modules/@loopscale/ui/dist/` tree.
   const fontsSrc = join(SRC, "fonts");
   if (existsSync(fontsSrc)) {
     const fontsDist = join(DIST, "fonts");

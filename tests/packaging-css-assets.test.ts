@@ -5,10 +5,10 @@ import { fileURLToPath } from "node:url";
 import { beforeAll, describe, expect, it } from "vitest";
 
 /**
- * usetheodev/usetheo-ui#10 — the public CSS assets are in the tarball.
+ * getloopscale/ui#10 — the public CSS assets are in the tarball.
  *
  * The seed brought `tailwind-preset.ts` across without the CSS pipeline around it, so from 0.14.0
- * the package published ZERO `.css` files while consumers kept importing `@usetheo/ui/preset.css`,
+ * the package published ZERO `.css` files while consumers kept importing `@loopscale/ui/preset.css`,
  * `/components.css` and `/fonts-cdn.css`. A clean `vite build` against those versions fails to
  * resolve them; the deployed dashboard only worked because it had been built in the 0.13.x era.
  *

@@ -3,10 +3,10 @@ import { CopyButton } from "./copy-button.js";
 
 export default { title: "Primitives / Inputs / CopyButton" };
 
-export const IconOnlyGhost: Story = () => <CopyButton value="theo deploy" aria-label="Copy" />;
+export const IconOnlyGhost: Story = () => <CopyButton value="loopzero deploy" aria-label="Copy" />;
 
 export const WithLabelOutline: Story = () => (
-  <CopyButton value="https://docs.usetheo.dev" label="Copy URL" variant="outline" />
+  <CopyButton value="https://docs.getloopscale.com" label="Copy URL" variant="outline" />
 );
 
 export const LongValue: Story = () => (

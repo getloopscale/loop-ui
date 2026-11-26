@@ -6,12 +6,12 @@
   "description": "A dl of honest aggregate metrics over a session's traces: trace count, wall-clock window, ∑cost, ∑tokens, error count (destructive when >0), distinct models. Sums of zero are honest, never an em-dash.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/badge.json",
-    "https://usetheodev.github.io/usetheo-ui/r/card.json",
-    "https://usetheodev.github.io/usetheo-ui/r/session.json",
-    "https://usetheodev.github.io/usetheo-ui/r/trace.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/badge.json",
+    "https://getloopscale.github.io/ui/r/card.json",
+    "https://getloopscale.github.io/ui/r/session.json",
+    "https://getloopscale.github.io/ui/r/trace.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

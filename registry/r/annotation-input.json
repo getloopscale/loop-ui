@@ -6,12 +6,12 @@
   "description": "Controlled, config-driven human annotation input. Dispatches on config.type (Phoenix's three-type model): categorical -> RadioGroup over named options; continuous -> number input bounded by the config; freeform -> textarea. Fully controlled (value + onValueChange); the consumer owns the config (fixture or backend store) and the submission. Composes the DS form primitives.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/radio-group.json",
-    "https://usetheodev.github.io/usetheo-ui/r/input.json",
-    "https://usetheodev.github.io/usetheo-ui/r/textarea.json",
-    "https://usetheodev.github.io/usetheo-ui/r/label.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/radio-group.json",
+    "https://getloopscale.github.io/ui/r/input.json",
+    "https://getloopscale.github.io/ui/r/textarea.json",
+    "https://getloopscale.github.io/ui/r/label.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

@@ -8,11 +8,11 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/dialog.json",
-    "https://usetheodev.github.io/usetheo-ui/r/button.json",
-    "https://usetheodev.github.io/usetheo-ui/r/input.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/dialog.json",
+    "https://getloopscale.github.io/ui/r/button.json",
+    "https://getloopscale.github.io/ui/r/input.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {
