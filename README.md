@@ -1,4 +1,4 @@
-# @loopscale/ui
+# @getloopscale/ui
 
 Violet Forge design system — the generic React components and primitives that form the non-AI
 foundation of the LoopScale UI stack. Apache-2.0, ESM-only.
@@ -13,7 +13,7 @@ the two compose without a visual seam.
 ## Install
 
 ```bash
-pnpm add @loopscale/ui
+pnpm add @getloopscale/ui
 ```
 
 Or copy a single component, shadcn-style, from the published registry:

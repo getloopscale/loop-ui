@@ -1,6 +1,6 @@
 name: Release
 
-# loopscale-ui: `@loopscale/ui`. Changesets-driven release, matching the publishable repositories
+# loopscale-ui: `@getloopscale/ui`. Changesets-driven release, matching the publishable repositories
 # in the framework (theokit-ui, theokit-sdk, -di, -plugins, -studio, -gateways).
 #
 # WHAT THIS REPLACES: nothing — which was the problem. Until now the only way to ship this
@@ -15,7 +15,7 @@ name: Release
 # output, no third place to forget.
 #
 # AUTHENTICATION IS OIDC, NOT A TOKEN — once the connection exists. This requires a Trusted
-# Publisher on npmjs.com for `@loopscale/ui` naming THIS repository and THIS file; that is a
+# Publisher on npmjs.com for `@getloopscale/ui` naming THIS repository and THIS file; that is a
 # setting on the package, and it cannot be created from here. Until it is, the publish step
 # fails with `E404 Not Found - PUT`, which is npm's way of not revealing that a package exists
 # to someone who cannot publish it. The version pull request still opens and still works.

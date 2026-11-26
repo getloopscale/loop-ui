@@ -28,7 +28,7 @@ const twMerge = extendTailwindMerge({
 
 /**
  * Merge Tailwind classes with conflict resolution.
- * Standard utility across all @loopscale/ui components.
+ * Standard utility across all @getloopscale/ui components.
  */
 export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
