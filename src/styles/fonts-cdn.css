@@ -1,28 +1,16 @@
-/* LoopScale UI — font loading via Google Fonts CDN (opt-in).
+/* LoopScale UI — font loading from the Google Fonts CDN (opt-in).
  *
- * Use this entrypoint instead of `@theokit/ui/fonts.css` if you prefer to
- * fetch Geist + Geist Mono from `fonts.googleapis.com` rather than ship the
- * 290 KB of woff2 assets that the self-hosted entrypoint includes.
+ * Use this instead of `@getloopscale/ui/fonts.css` to fetch Hanken Grotesk and JetBrains Mono
+ * from `fonts.googleapis.com` and skip the woff2 files the self-hosted entry ships.
  *
- * Trade-offs:
- *   - PRO: zero static assets to host; smaller npm tarball footprint for
- *     consumers who use a `pnpm dlx` workflow.
- *   - CON: third-party network request on every page load; conflicts with
- *     strict CSP and GDPR jurisdictions; render-blocking on cold cache.
+ * The cost is a third-party request on every page load: it conflicts with a strict CSP and it
+ * blocks rendering on a cold cache. `@getloopscale/ui/styles.css` bundles the self-hosted fonts,
+ * so pair this file with the pieces instead:
  *
- * The default for `@theokit/ui/styles.css` (and `@theokit/ui/fonts.css`)
- * is the self-hosted path (HIGH-002 / D6). Switch to this only if your
- * threat model permits the third-party fetch.
+ *   @import "@getloopscale/ui/fonts-cdn.css";
+ *   @import "@getloopscale/ui/tokens.css";
  *
- * Usage:
- *
- *   @import "@theokit/ui/tokens.css";
- *   @import "@theokit/ui/fonts-cdn.css";  // NOT styles.css (which bundles
- *                                          // the self-hosted @font-face)
- *
- * The CSS variables (`--font-display`, `--font-body`, `--font-mono`) in
- * tokens.css already reference `"Geist"` / `"Geist Mono"`; no component
- * change required when switching entrypoints.
+ * `--font-display`, `--font-body` and `--font-mono` in `tokens.css` already name both families.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap");

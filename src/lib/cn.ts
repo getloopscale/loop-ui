@@ -2,7 +2,7 @@ import { type ClassValue, clsx } from "clsx";
 import { extendTailwindMerge } from "tailwind-merge";
 
 /**
- * Custom tailwind-merge instance taught about the Violet Forge typescale.
+ * Custom tailwind-merge instance taught about the typescale.
  *
  * Vanilla `tailwind-merge` groups every `text-*` class together — so
  * `text-label` (a font-size from the typescale) and `text-accent`

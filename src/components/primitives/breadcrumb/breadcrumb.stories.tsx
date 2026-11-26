@@ -31,7 +31,7 @@ export const Default: Story = () => (
     <Breadcrumb.Separator />
     {item("Projects", "/projects")}
     <Breadcrumb.Separator />
-    {item("Violet Forge")}
+    {item("Design tokens")}
   </Trail>
 );
 

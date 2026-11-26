@@ -9,7 +9,7 @@ import { cn } from "../../../lib/cn.js";
  * dark mode preview, feature flags).
  *
  * Off-state uses --muted, on-state uses --primary with a subtle glow shadow
- * to mark "this is active" in the violet brand language.
+ * to mark "this is active" in the brand color.
  *
  * The `size` prop accepts `"sm" | "md" | "lg"`. Default `md` preserves the
  * 20×36 track from before this prop existed.

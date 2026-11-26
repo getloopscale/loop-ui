@@ -8,7 +8,7 @@ import { cn } from "../../../lib/cn.js";
 /**
  * Checkbox — built on Radix Checkbox.
  *
- * Supports tri-state via `checked="indeterminate"`. Violet fill when on,
+ * Supports tri-state via `checked="indeterminate"`. Brand-colored fill when on,
  * border-only when off. Themed via tokens (--primary, --background).
  *
  * The `size` prop accepts `"sm" | "md" | "lg"`. Default `md` preserves the

@@ -22,10 +22,10 @@ describe("Button", () => {
 
   it("applies the primary variant by default", () => {
     render(<Button>Primary</Button>);
-    expect(screen.getByRole("button").className).toContain("bg-primary");
+    expect(screen.getByRole("button").className).toContain("bg-foreground");
   });
 
-  it("applies the accent variant when requested (burnt sienna)", () => {
+  it("applies the accent variant when requested (lime fill)", () => {
     render(<Button variant="accent">Celebrate</Button>);
     expect(screen.getByRole("button").className).toContain("bg-accent");
   });
@@ -69,7 +69,7 @@ describe("Button", () => {
     );
     const link = screen.getByRole("link", { name: "Deploy" });
     expect(link).toHaveAttribute("href", "/deploy");
-    expect(link.className).toContain("bg-primary");
+    expect(link.className).toContain("bg-foreground");
   });
 
   it("has no axe accessibility violations", async () => {

@@ -29,10 +29,10 @@ const inputVariants = cva(
 /**
  * Input — text input primitive.
  *
- * Violet Forge specifics:
+ * Specifics:
  *   - height 40px (h-10) matching default Button md.
  *   - rounded-lg (8px) — matches buttons (compact Builder identity, 2026-07-16).
- *   - focus uses violet ring (--ring).
+ *   - focus uses the brand-colored ring (--ring).
  *   - placeholder uses --muted-foreground.
  *
  * The `size` prop accepts `"sm" | "md" | "lg"`. Default `md` preserves the

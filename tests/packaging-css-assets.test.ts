@@ -80,10 +80,10 @@ describe("#10 — the published tarball carries the CSS assets", () => {
 
   it("test_the_self_hosted_font_assets_ship_too", () => {
     const files = packedFiles();
-    // `fonts.css` refers to `./fonts/geist-400.woff2`. Publishing the stylesheet without the woff2
+    // `fonts.css` refers to the files under `./fonts/`. Publishing the stylesheet without the woff2
     // is worse than publishing neither: the import resolves and every glyph 404s.
     const woff2 = files.filter((f) => f.startsWith("dist/fonts/") && f.endsWith(".woff2"));
-    expect(woff2.length).toBeGreaterThanOrEqual(6);
+    expect(woff2.length).toBeGreaterThanOrEqual(4);
   });
 
   it("test_every_css_export_points_at_a_file_that_is_published", () => {

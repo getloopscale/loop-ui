@@ -1,9 +1,9 @@
 /**
- * LoopScale UI Tailwind preset — Violet Forge identity.
+ * LoopScale UI Tailwind preset (Tailwind 3).
  *
  * Single source of truth for the design system's utility-level tokens:
  *   - colors mapped to CSS variables (HSL split via `hsl(var(--x) / <alpha>)`)
- *   - Geist-inspired typescale (display / title / body / label / code tiers)
+ *   - typescale (display / title / body / label / code tiers)
  *   - radii, shadows, motion timing & duration, keyframes
  *   - tailwindcss-animate plugin
  *
@@ -120,11 +120,11 @@ export const loopscaleUIPreset: Partial<Config> = {
         sans: "var(--font-body)",
         mono: "var(--font-mono)",
       },
-      /* Geist-inspired Violet Forge typescale.
+      /* Typescale.
        *
        * Three strict weights: 400 (body), 500 (UI), 600 (display/headings).
        * Letter-spacing scales with size — aggressive negative on display.
-       * Mirrors the Vercel/Geist vocabulary while keeping LoopZero's identity.
+       * Kept in step with the `@theme` typescale in tokens-v4.css.
        */
       fontSize: {
         // Display tier — aggressive compression, content-led headlines
@@ -137,9 +137,9 @@ export const loopscaleUIPreset: Partial<Config> = {
         "title-lg": ["24px", { lineHeight: "1.33", letterSpacing: "-0.04em", fontWeight: "600" }],
         "title-md": ["20px", { lineHeight: "1.4", letterSpacing: "-0.03em", fontWeight: "600" }],
         // Body tier — FAANG-density realignment 2026-05-22: body-md is the
-        // industry-standard 14px (shadcn / Vercel Geist / Linear / Stripe /
+        // industry-standard 14px (shadcn / Vercel / Linear / Stripe /
         // Mantine). The previous 15px was idiosyncratic. body-sm is 13px (its
-        // own line-height / weight signature), kept in lockstep with @theokit/ui
+        // own line-height / weight signature), kept in lockstep with tokens-v4.css
         // and this preset's own tokens-v4.css so menu items / secondary text
         // render at the same size across both scopes.
         "body-lg": ["18px", { lineHeight: "1.56", letterSpacing: "-0.01em", fontWeight: "400" }],
@@ -183,8 +183,8 @@ export const loopscaleUIPreset: Partial<Config> = {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 0 0 hsl(var(--primary) / 0.5)" },
-          "50%": { boxShadow: "0 0 0 8px hsl(var(--primary) / 0)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 color-mix(in oklch, var(--primary) 50%, transparent)" },
+          "50%": { boxShadow: "0 0 0 8px transparent" },
         },
       },
       animation: {

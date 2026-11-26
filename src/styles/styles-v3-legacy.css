@@ -7,7 +7,7 @@
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    border-color: var(--border);
   }
 
   html {
@@ -18,14 +18,11 @@
   }
 
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    /* OpenType ligatures globally — Geist's "liga" feature is structural
-     * and gives the Vercel-tight glyph combinations. */
-    font-feature-settings: "liga" 1, "ss01" 1;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 
-  /* Display headings inherit theme display font (Geist by default).
+  /* Display headings inherit theme display font (Hanken Grotesk by default).
    * Per-size tracking is set in tailwind.config.ts; this is the safety net. */
   h1,
   h2,
@@ -45,19 +42,19 @@
     font-feature-settings: "tnum" 1, "liga" 1;
   }
 
-  /* Focus ring — violet (signature) */
+  /* Focus ring: the brand color. */
   :focus-visible {
-    outline: 2px solid hsl(var(--ring));
+    outline: 2px solid var(--ring);
     outline-offset: 2px;
   }
 
-  /* Selection — soft violet */
+  /* Selection: a soft wash of the brand color. */
   ::selection {
-    background-color: hsl(var(--primary) / 0.25);
-    color: hsl(var(--foreground));
+    background-color: color-mix(in oklch, var(--primary) 25%, transparent);
+    color: var(--foreground);
   }
 
-  /* Native scrollbar fallback (Violet Forge).
+  /* Native scrollbar fallback .
    * Used for native browser scroll on elements that don't wrap in <ScrollArea>.
    * Components that DO use <ScrollArea> hide the native scrollbar via Radix.
    */
@@ -69,20 +66,20 @@
     background: transparent;
   }
   *::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--primary) / 0.25);
+    background-color: color-mix(in oklch, var(--muted-foreground) 25%, transparent);
     border: 2px solid transparent;
     background-clip: content-box;
     border-radius: 9999px;
     transition: background-color var(--duration-fast) var(--ease-out-soft);
   }
   *::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(var(--primary) / 0.5);
+    background-color: color-mix(in oklch, var(--muted-foreground) 50%, transparent);
   }
   *::-webkit-scrollbar-thumb:active {
-    background-color: hsl(var(--primary) / 0.75);
+    background-color: color-mix(in oklch, var(--muted-foreground) 75%, transparent);
   }
   * {
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--primary) / 0.3) transparent;
+    scrollbar-color: color-mix(in oklch, var(--muted-foreground) 30%, transparent) transparent;
   }
 }

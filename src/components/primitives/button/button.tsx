@@ -5,14 +5,14 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "../../../lib/cn.js";
 
 /**
- * Button — primitive action element in the Violet Forge design system.
+ * Button — primitive action element.
  *
  * Variants:
- *   - primary    LoopScale violet fill, glow on hover (signature)
+ *   - primary    neutral fill (ink on paper, bone on ink): the default action
  *   - secondary  surface with hairline border
- *   - accent     burnt-sienna fill, celebratory actions
+ *   - accent     lime fill: the one highlighted action on a screen
  *   - ghost      transparent, hover lifts surface
- *   - link       text-only, primary color, underline on hover
+ *   - link       text-only, brand color, underline on hover
  *   - destructive  for irreversible actions
  *
  * Sizes: sm (32px) · md (40px, default) · lg (48px) · icon (square 40px)
@@ -22,9 +22,6 @@ import { cn } from "../../../lib/cn.js";
 const buttonVariants = cva(
   [
     "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg",
-    // NIT-004: `font-medium` (500) aligns with the design-system.md UI weight.
-    // Previously `font-bold` (700) exceeded the normative 400/500/600 weight
-    // range declared for Geist Sans in the Violet Forge identity.
     "font-medium font-sans tracking-tight",
     "transition-[box-shadow,background-color,color,transform] duration-base ease-out-soft",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
@@ -44,9 +41,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: [
-          "bg-primary text-primary-foreground",
-          "hover:bg-primary hover:shadow-glow",
-          "active:scale-[0.98] active:bg-primary-deep active:shadow-none",
+          "bg-foreground text-background",
+          "hover:bg-foreground/90",
+          "active:scale-[0.98] active:bg-foreground/80",
         ],
         secondary: [
           "border border-border bg-secondary text-secondary-foreground",

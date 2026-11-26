@@ -34,7 +34,7 @@
  */
 
 import type { Dirent } from "node:fs";
-import { readdir, readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { join, relative, sep } from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -64,7 +64,8 @@ const WORD_ALLOWLIST = new Set(["façade", "façades", "naïve", "café", "résu
 
 /** Files exempt from the scan, relative to the repository root. */
 /** B-065 — every CHANGELOG, root or per package. Released entries are immutable (Rule 6). */
-const isChangelog = (rel: string): boolean => rel === "CHANGELOG.md" || rel.endsWith("/CHANGELOG.md");
+const isChangelog = (rel: string): boolean =>
+  rel === "CHANGELOG.md" || rel.endsWith("/CHANGELOG.md");
 
 const FILE_ALLOWLIST = new Set<string>([
   // This file names Portuguese words in order to ban them.

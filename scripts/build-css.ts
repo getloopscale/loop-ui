@@ -10,8 +10,8 @@
  *
  * Two kinds of output, and the distinction is the whole design:
  *
- * - **Static files** (`tokens`, `tokens-v4`, `preset`, `styles`, `styles-v3-legacy`, `fonts`,
- *   `fonts-cdn`, and the woff2 assets) are copied verbatim. They are authored CSS, not build
+ * - **Static files** (`tokens`, `tokens-v4`, `preset`, `styles`, `base`, `styles-v3-legacy`, `fonts`,
+ *   `fonts`, `fonts-cdn`, and the woff2 assets) are copied verbatim. They are authored CSS, not build
  *   products, and `src/styles/` is their source of truth.
  *
  * - **`components.css` is COMPILED** by the Tailwind v4 CLI against `components-entry.css`, which
@@ -41,6 +41,7 @@ const STATIC_CSS: ReadonlyArray<readonly [string, string]> = [
   ["tokens-v4.css", "tokens-v4.css"],
   ["preset.css", "preset.css"],
   ["styles.css", "styles.css"],
+  ["base.css", "base.css"],
   ["styles-v3-legacy.css", "styles-v3-legacy.css"],
   ["fonts.css", "fonts.css"],
   ["fonts-cdn.css", "fonts-cdn.css"],
