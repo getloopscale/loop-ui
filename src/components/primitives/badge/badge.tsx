@@ -8,8 +8,8 @@ import { cn } from "../../../lib/cn.js";
  *
  * Variants:
  *   - default     muted surface, hairline border
- *   - primary     violet outline + soft violet bg
- *   - accent      burnt sienna (celebration / pro / beta)
+ *   - primary     brand-colored outline and a soft wash of it
+ *   - accent      lime fill with ink text (pro / beta / new)
  *   - success     deploy succeeded
  *   - warning     attention needed
  *   - destructive failed
@@ -29,7 +29,7 @@ const badgeVariants = cva(
       variant: {
         default: "border-border/40 bg-muted text-muted-foreground",
         primary: "border-primary/30 bg-primary/10 text-primary",
-        accent: "border-accent/40 bg-accent/15 text-accent",
+        accent: "border-accent bg-accent text-accent-foreground",
         success: "border-success/40 bg-success/15 text-success",
         warning: "border-warning/40 bg-warning/15 text-warning",
         destructive: "border-destructive/40 bg-destructive/15 text-destructive",

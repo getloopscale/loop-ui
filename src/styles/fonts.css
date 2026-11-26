@@ -1,75 +1,59 @@
-/* LoopScale UI — font loading (self-hosted by default).
+/* LoopScale UI — font loading, self-hosted.
  *
- * Default theme (Violet Forge): Geist Sans + Geist Mono.
- * Vercel-inspired typographic vocabulary — tight letter-spacing on display,
- * 3 strict weights (400 body / 500 UI / 600 display), OpenType "liga"
- * enabled globally. Geist is Vercel's open-source typeface, optimized for
- * product UIs and code surfaces. Licensed under SIL Open Font License
- * (LICENSE-GEIST.txt sits next to the woff2 files in `dist/fonts/`).
+ * Hanken Grotesk for text and JetBrains Mono for code, labels and numbers. Both are variable
+ * fonts under the SIL Open Font License; the license texts sit next to the woff2 files in
+ * `dist/fonts/`.
  *
- * ── Why self-hosted by default (HIGH-002 / D6) ────────────────────────────
- * The previous default `@import url("https://fonts.googleapis.com/...")`
- * triggered a third-party network request on every page load — friction for
- * CSP-strict deployments, GDPR jurisdictions, and offline-first products.
- * The fonts ship as woff2 next to this CSS; consumers who installed
- * `@theokit/ui/styles.css` get Geist with zero external dependencies.
+ * Self-hosting is the default because a stylesheet import from a font CDN is a third-party
+ * request on every page load, which strict CSP deployments and offline products cannot make.
+ * `@getloopscale/ui/fonts-cdn.css` is the opt-in alternative.
  *
- * Asset budget: 6 woff2 files (~290 KB total). Three weights per family
- * cover the entire Violet Forge typescale (display-2xl through code-sm).
- *
- * ── Opt-in CDN ────────────────────────────────────────────────────────────
- * Consumers who prefer Google Fonts CDN (e.g. don't want to host static
- * assets) can use the parallel entrypoint instead:
- *
- *   @import "@theokit/ui/fonts-cdn.css";
- *
- * That file keeps the legacy @import to fonts.googleapis.com.
+ * Each family ships one file per subset, and the browser downloads a subset only when the page
+ * uses a character in its `unicode-range`. Latin covers Portuguese and Western European text.
  */
 
 @font-face {
-  font-family: "Geist";
+  font-family: "Hanken Grotesk";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
-  src: url("./fonts/geist-400.woff2") format("woff2");
+  src: url("./fonts/hanken-grotesk-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
 }
 
 @font-face {
-  font-family: "Geist";
+  font-family: "Hanken Grotesk";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 100 900;
   font-display: swap;
-  src: url("./fonts/geist-500.woff2") format("woff2");
+  src: url("./fonts/hanken-grotesk-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: "Geist";
+  font-family: "JetBrains Mono";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 100 800;
   font-display: swap;
-  src: url("./fonts/geist-600.woff2") format("woff2");
+  src: url("./fonts/jetbrains-mono-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
 }
 
 @font-face {
-  font-family: "Geist Mono";
+  font-family: "JetBrains Mono";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 800;
   font-display: swap;
-  src: url("./fonts/geist-mono-400.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Geist Mono";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./fonts/geist-mono-500.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Geist Mono";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("./fonts/geist-mono-600.woff2") format("woff2");
+  src: url("./fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

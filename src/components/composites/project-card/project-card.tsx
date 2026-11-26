@@ -58,7 +58,7 @@ interface ProjectCardProps extends HTMLAttributes<HTMLAnchorElement | HTMLDivEle
 /**
  * ProjectCard — surface for a project in a project listing.
  *
- * Light hover lift (no shadow inflation), violet ring on focus,
+ * Light hover lift (no shadow inflation), brand-colored ring on focus,
  * status badge with optional pulse, framework + region in muted footer.
  */
 const ProjectCard = forwardRef<HTMLElement, ProjectCardProps>(

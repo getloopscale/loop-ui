@@ -191,6 +191,6 @@ describe("Breadcrumb — wiring conventions", () => {
   it("default story renders the canonical trail", () => {
     render(<DefaultStory />);
     expect(screen.getByRole("navigation")).toHaveAttribute("aria-label", "breadcrumb");
-    expect(screen.getByText("Violet Forge")).toHaveAttribute("aria-current", "page");
+    expect(screen.getByText("Design tokens")).toHaveAttribute("aria-current", "page");
   });
 });

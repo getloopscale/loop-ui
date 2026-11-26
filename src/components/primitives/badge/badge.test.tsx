@@ -14,9 +14,9 @@ describe("Badge", () => {
     expect(screen.getByText("x").className).toContain("bg-muted");
   });
 
-  it("applies the accent variant for celebratory status", () => {
+  it("applies the accent variant as a lime fill with ink text", () => {
     render(<Badge variant="accent">Beta</Badge>);
-    expect(screen.getByText("Beta").className).toContain("text-accent");
+    expect(screen.getByText("Beta").className).toContain("bg-accent text-accent-foreground");
   });
 
   it("renders Badge.Dot with pulse animation when requested", () => {

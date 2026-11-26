@@ -24,7 +24,7 @@ export const Variants: Story = () => (
         <Download /> Download
       </Button>
     </Row>
-    <Row label="Accent (burnt sienna)">
+    <Row label="Accent (lime fill)">
       <Button variant="accent">Celebrate</Button>
     </Row>
     <Row label="Ghost">

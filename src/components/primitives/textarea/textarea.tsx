@@ -6,7 +6,7 @@ import { cn } from "../../../lib/cn.js";
 /**
  * Textarea — multi-line input mirror of Input.
  *
- * Matches Input visuals (violet focus ring, --input border, --card bg).
+ * Matches Input visuals (focus ring, --input border, --card bg).
  * The `size` prop accepts `"sm" | "md" | "lg"`. Default `md` preserves the
  * 80px (5rem) min-height + body-md text from before this prop existed.
  *

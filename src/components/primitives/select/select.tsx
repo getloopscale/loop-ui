@@ -52,7 +52,7 @@ const selectTriggerVariants = cva(
  *     </Select.Content>
  *   </Select>
  *
- * Trigger matches Input height + violet focus ring. Content uses popover
+ * Trigger matches Input height and focus ring. Content uses popover
  * surface with check on the selected item.
  */
 

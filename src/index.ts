@@ -1,4 +1,4 @@
-// @getloopscale/ui barrel — seeded from loopscale-ui (pivot M-B). 54 non-AI components + Violet Forge foundation.
+// @getloopscale/ui barrel — seeded from loopscale-ui (pivot M-B). 54 components and the LoopScale design tokens.
 
 export { cn } from "./lib/cn.js";
 export {

@@ -21,7 +21,7 @@ interface LoginSplitProps extends HTMLAttributes<HTMLDivElement> {
  * LoginSplit — 50/50 split layout shell.
  *
  * Used for the auth flow. Two slots (`left`, `right`); the right pane has a
- * subtle violet wash so the illustration sits inside the LoopScale identity. Mobile
+ * subtle wash of the brand color so the illustration sits inside the LoopScale identity. Mobile
  * collapses to single column.
  */
 const LoginSplit = forwardRef<HTMLDivElement, LoginSplitProps>(
@@ -44,7 +44,7 @@ const LoginSplit = forwardRef<HTMLDivElement, LoginSplitProps>(
         <div
           className={cn(
             "relative flex items-center justify-center px-6 py-12 lg:px-12",
-            "bg-dotted-violet bg-muted/60",
+            "bg-dotted-brand bg-muted/60",
           )}
         >
           <div className="w-full max-w-lg">{right}</div>
