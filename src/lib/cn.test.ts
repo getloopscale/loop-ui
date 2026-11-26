@@ -24,6 +24,6 @@ describe("cn", () => {
 
   // TODO: when a component needs `shadow-glow` vs `shadow-md` to resolve as a conflict,
   // configure tailwind-merge with extendTailwindMerge to teach it our custom shadow scale.
-  // For now, design-system custom utilities (shadow-glow, shadow-glow-strong, bg-dotted-violet)
+  // For now, design-system custom utilities (shadow-glow, shadow-glow-strong, bg-dotted-brand)
   // are composable with standard shadows — explicit by design.
 });

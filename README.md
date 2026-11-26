@@ -1,7 +1,7 @@
 # @getloopscale/ui
 
-Violet Forge design system — the generic React components and primitives that form the non-AI
-foundation of the LoopScale UI stack. Apache-2.0, ESM-only.
+The LoopScale design system: the brand tokens and the generic React components and primitives
+that form the non-AI foundation of the LoopScale UI stack. Apache-2.0, ESM-only.
 
 This is the layer with **no agent in it**: the shell, the tables, the forms, the feedback states,
 the dashboard pieces. [`@theokit/ui`](https://github.com/usetheokit/theokit-ui) builds on top of it
@@ -42,9 +42,39 @@ Generated from `src/components/` by `pnpm sync:readme` — do not edit the block
 
 ## Theming
 
-The tokens come from the Violet Forge foundation shipped here (`tailwind-preset`, `themes`, `cn`).
-Consumers that also install `@theokit/ui` get the same token names, so a theme defined once applies
-to both packages.
+The default theme is the LoopScale brand. There is nothing to configure: import the stylesheet and
+the components render in it.
+
+```css
+@import "@getloopscale/ui/styles.css";
+```
+
+| | Light | Dark |
+| --- | --- | --- |
+| Background | paper `#F4F3EF` | ink `#111415` |
+| Raised surface | `#FBFAF7` | `#181C1D` |
+| Border | `#DCDAD3` | `#2A3032` |
+| Text | ink `#16191A` | bone `#E7E6E0` |
+| Secondary text | `#5A615F` | `#9BA29F` |
+| Brand color as text, link and focus (`primary`) | `#556B00` | lime `#C4E34F` |
+| Brand color as a fill (`accent`, ink text on top) | lime `#C4E34F` | lime `#C4E34F` |
+
+Light is the default. Put `class="dark"` on `<html>`, or on any ancestor, for the dark theme.
+
+Three rules come with the palette:
+
+- The default button is neutral. Lime is for the logo, links, focus and one highlighted action per
+  screen, which is `<Button variant="accent">`.
+- Lime has no contrast on paper, so `accent` is a fill only. Text in the brand color uses `primary`.
+- Lime sits between the warning yellow and the success green. A status always carries a text label
+  next to its color.
+
+Text is Hanken Grotesk and code is JetBrains Mono. Both ship self-hosted in the package under the
+SIL Open Font License; `@getloopscale/ui/fonts-cdn.css` loads them from Google Fonts instead.
+
+`tests/brand-tokens.test.ts` pins these values and checks that every text pair reaches 4.5:1.
+
+`@theokit/ui` uses the same token names, so the theme applies to both packages.
 
 ## Development
 

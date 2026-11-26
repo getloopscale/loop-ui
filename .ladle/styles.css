@@ -1,14 +1,13 @@
-/* Ladle-only entry (dev tooling — não é shipped no pacote).
+/* Ladle entry. Dev tooling, not shipped in the package.
  *
- * global-v4.css é o entry CANÔNICO do ecossistema (mesma experiência do
- * dashboard/@theokit/ui styles.css): tailwind v4 core + fonts + tokens
- * runtime + @theme v4 + base layer (focus ring violeta, scrollbar,
- * ligatures Geist, cursor de botão). Ver issue loopscale-ui#10 — estes
- * arquivos devem voltar a ser publicados no pacote.
- *
- * O @config soma o loopscaleUIPreset DESTE repo (tailwindcss-animate + tokens
- * utility-level que o @theme não cobre) e o @source escaneia src/.
+ * Same pieces as `src/styles/styles.css`, read straight from `src/styles/` so a story always
+ * renders the tokens and base layer the package ships. The one difference is `components.css`:
+ * it is a build product, so here Tailwind scans `src/` instead.
  */
-@import "./global-v4.css";
+@import "tailwindcss";
+@import "../src/styles/fonts.css";
+@import "../src/styles/tokens.css";
+@import "../src/styles/tokens-v4.css";
+@import "../src/styles/base.css";
 @config "./tailwind.config.ts";
 @source "../src";

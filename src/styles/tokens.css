@@ -1,93 +1,85 @@
-/* LoopScale UI — Design System "Violet Forge" tokens.
+/* LoopScale UI — design tokens.
  *
- * Tokens normativos. Não edite valores aqui sem revisão do design system.
- * Referência: docs/design-system.md
+ * The values are the LoopScale brand: ink and paper neutrals and one brand color, lime.
+ * Ink is a very dark gray pulled toward green and the text is a slightly warm bone, so the
+ * dark theme sits at 14.8:1 where pure white on pure black would be 21:1.
  *
- * Estratégia:
- *   - CSS custom properties para todas as cores, scales e durations.
- *   - Default é light. Dark é ativado via [data-theme="dark"] ou .dark.
- *   - HSL split (h s l) em vez de hex permite alpha via color-mix() ou hsl(var(--x) / .5).
+ *   - Every color, scale and duration is a CSS custom property.
+ *   - Light is the default. The `.dark` class on an ancestor switches to dark.
+ *   - Values are plain colors, so alpha goes through `color-mix()` or Tailwind's `/50`
+ *     modifiers. Never wrap a token in `hsl()`.
  *
- * Roxo LoopScale: #A855F7  →  oklch(0.628 0.225 296)  (electric violet — unified 2026-06-09)
- * Burnt sienna:  #C96442  →  hsl(15 54% 53%)
+ * `tests/brand-tokens.test.ts` holds these values and their contrast ratios in place.
  */
 
-/* `:root` and `[data-theme="dark"]` declarations are intentionally NOT wrapped
- * in `@layer base` so they apply at the document level regardless of whether
- * the consumer's CSS pipeline runs Tailwind's preflight. The texture utilities
- * below remain in `@layer utilities` because that layer affects ordering only,
- * not the cascade root.
+/* `:root` and `.dark` are intentionally NOT wrapped in `@layer base`, so they apply at the
+ * document level whether or not the consumer's CSS pipeline runs Tailwind's preflight. The
+ * texture utilities below stay in `@layer utilities` because that layer only affects ordering.
  */
 :root {
-  /* Base palette ------------------------------------------------------- *
-     * Neutrals are 100% desaturated (Vercel-style). Color comes from the
-     * primary (violet) + accent (burnt sienna) tokens below — never from
-     * surface tints.
-     */
-  --background: oklch(1 0 0); /* #FFFFFF */
-  --foreground: oklch(0.146 0 0); /* #0A0A0A */
+  color-scheme: light;
 
-  --card: oklch(1 0 0); /* #FFFFFF */
-  --card-foreground: oklch(0.146 0 0);
+  /* Neutrals: paper ---------------------------------------------------- */
+  --background: #f4f3ef; /* paper */
+  --foreground: #16191a; /* ink, 15.9:1 */
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.146 0 0);
+  --card: #fbfaf7; /* paper-raised */
+  --card-foreground: #16191a;
 
-  /* Primary — LoopScale violet (equity) ------------------------------------- *
-   * Post-T3.1 (ADR-0006): -deep and -glow are derived algorithmically via
-   * OKLCH relative-color syntax. Themes that need a per-token override may
-   * still declare these explicitly — the cascade resolves the override.
-   * `max()`/`min()` clamps protect dark/light themes from L overflow (EC-7).
+  --popover: #fbfaf7;
+  --popover-foreground: #16191a;
+
+  /* Primary: the brand color where it has to work as text ------------- *
+   * Lime itself has no contrast on paper, so the light theme uses its dark
+   * olive for links, focus and filled controls. `-deep` and `-glow` are derived
+   * with OKLCH relative-color syntax; the clamps keep L inside the gamut.
    */
-  --primary: oklch(0.628 0.225 296); /* #A855F7 — LoopScale violet electric (unified 2026-06-09) */
-  --primary-deep: oklch(from var(--primary) max(0.05, calc(l - 0.16)) c h);
+  --primary: #556b00; /* lime-text, 5.4:1 */
+  --primary-deep: oklch(from var(--primary) max(0.05, calc(l - 0.08)) c h);
   --primary-glow: oklch(from var(--primary) min(0.95, calc(l + 0.18)) c h);
-  --primary-foreground: oklch(1 0 0);
+  --primary-foreground: #fbfaf7;
 
-  /* Secondary — neutral muted ----------------------------------------- */
-  --secondary: oklch(0.97 0 0); /* #F5F5F5 */
-  --secondary-foreground: oklch(0.146 0 0);
+  /* Secondary and muted: one step below paper -------------------------- */
+  --secondary: #eae8e2;
+  --secondary-foreground: #16191a;
+  --muted: #eae8e2;
+  --muted-foreground: #5a615f; /* ink-muted, 5.7:1 */
 
-  /* Accent — burnt sienna --------------------------------------------- *
-   * T3.1: accent-deep derived. Override path identical to primary.
+  /* Accent: lime as a fill, always with ink on top --------------------- *
+   * Reserved for the one highlighted action on a screen. Never use it as a
+   * text color: on paper it fails contrast.
    */
-  --accent: oklch(0.621 0.132 39); /* #C96442 */
-  --accent-deep: oklch(from var(--accent) max(0.05, calc(l - 0.13)) c h);
-  --accent-foreground: oklch(1 0 0);
+  --accent: #c4e34f; /* lime-fill */
+  --accent-deep: oklch(from var(--accent) max(0.05, calc(l - 0.06)) c h);
+  --accent-foreground: #111415; /* 12.7:1 */
 
-  /* Muted ------------------------------------------------------------- */
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.555 0 0); /* #737373 */
-
-  /* Surfaces, borders, inputs ----------------------------------------- */
-  --border: oklch(0.931 0 0); /* #E8E8E8 — Vercel-style hairline */
-  --input: oklch(0.931 0 0);
-  --ring: oklch(0.628 0.225 296); /* matches primary */
+  /* Borders, inputs, focus -------------------------------------------- */
+  --border: #dcdad3; /* paper-line */
+  --input: #dcdad3;
+  --ring: #556b00;
 
   /* Semantics --------------------------------------------------------- */
-  --success: oklch(0.611 0.161 149.7); /* #16A34A */
-  --success-foreground: oklch(1 0 0);
-  --warning: oklch(0.67 0.154 60.6); /* #D97706 */
-  --warning-foreground: oklch(1 0 0);
-  --destructive: oklch(0.579 0.214 27.2); /* #DC2626 */
-  --destructive-foreground: oklch(1 0 0);
-  --info: oklch(0.626 0.186 259.6); /* #3B82F6 */
-  --info-foreground: oklch(1 0 0);
+  --success: #1f7a4f;
+  --success-foreground: #fbfaf7;
+  --warning: #7a6200;
+  --warning-foreground: #fbfaf7;
+  --destructive: #b3372a;
+  --destructive-foreground: #fbfaf7;
+  --info: #2c5e99;
+  --info-foreground: #fbfaf7;
 
-  /* Status (D4 — operational state group) ----------------------------- *
-   * Separate from semantic group (success/destructive/warning/info, which
-   * are action-result colors). Status describes component liveness:
-   * online (alive), offline (dead), degraded (alive-but-slow), info (flag).
-   * Defaults mirror semantic counterparts; themes override for distinction.
+  /* Status: liveness of a component, as opposed to the result of an action.
+   * Lime sits between the warning yellow and the success green, so a status
+   * always carries a text label next to its color.
    */
-  --status-online: oklch(0.611 0.161 149.7);
-  --status-online-foreground: oklch(1 0 0);
-  --status-offline: oklch(0.579 0.214 27.2);
-  --status-offline-foreground: oklch(1 0 0);
-  --status-degraded: oklch(0.67 0.154 60.6);
-  --status-degraded-foreground: oklch(1 0 0);
-  --status-info: oklch(0.626 0.186 259.6);
-  --status-info-foreground: oklch(1 0 0);
+  --status-online: #1f7a4f;
+  --status-online-foreground: #fbfaf7;
+  --status-offline: #b3372a;
+  --status-offline-foreground: #fbfaf7;
+  --status-degraded: #7a6200;
+  --status-degraded-foreground: #fbfaf7;
+  --status-info: #2c5e99;
+  --status-info-foreground: #fbfaf7;
 
   /* Radii ------------------------------------------------------------- */
   --radius-none: 0px;
@@ -115,11 +107,7 @@
   --space-24: 96px;
   --space-32: 128px;
 
-  /* Elevation — theme-aware (uses --foreground for shadow ink,
-     * --primary for the signature glow, so swapping themes recolors them).
-     * Post-T2.5: tokens are OKLCH; we compose alpha via color-mix(in oklch, ...)
-     * which is perceptually correct AND works with any color-space variable.
-     */
+  /* Elevation. Shadows take their ink from --foreground and the glow from --primary. */
   --shadow-sm: 0 1px 2px 0 color-mix(in oklch, var(--foreground) 6%, transparent);
   --shadow-md: 0 2px 8px -2px color-mix(in oklch, var(--foreground) 8%, transparent), 0 1px 3px
     color-mix(in oklch, var(--foreground) 6%, transparent);
@@ -137,75 +125,63 @@
   --duration-slow: 360ms;
   --stagger: 60ms;
 
-  /* Typography (Geist family — Vercel-inspired Violet Forge) ---------- */
-  --font-display: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-body: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Typography: Hanken Grotesk for text, JetBrains Mono for code, labels and numbers. */
+  --font-display: "Hanken Grotesk", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
-/* Dark mode — dominante --------------------------------------------- *
-   * Vercel-aligned grayscale: pure neutrals (0% saturation) for every
-   * surface and text layer. Color only in primary (violet), accent (burnt
-   * sienna), and semantic tokens (success/warning/destructive/info).
-   *
-   * Activated exclusively via the `.dark` class on `<html>` (set by
-   * `ThemeProvider`, `ThemeScript`, or consumers manually). The previous
-   * `[data-theme="dark"]` companion selector was dead — `data-theme` holds
-   * the theme NAME, never the literal `"dark"`.
-   */
+/* Dark theme. Activated by the `.dark` class on an ancestor, usually `<html>`. */
 .dark {
-  --background: oklch(0.146 0 0); /* #0A0A0A */
-  --foreground: oklch(0.97 0 0); /* #F5F5F5 */
+  color-scheme: dark;
 
-  --card: oklch(0.182 0 0); /* #121212 */
-  --card-foreground: oklch(0.97 0 0);
+  /* Neutrals: ink ------------------------------------------------------ */
+  --background: #111415; /* ink */
+  --foreground: #e7e6e0; /* bone, 14.8:1 */
 
-  --popover: oklch(0.204 0 0); /* #171717 */
-  --popover-foreground: oklch(0.97 0 0);
+  --card: #181c1d; /* ink-raised */
+  --card-foreground: #e7e6e0;
 
-  --primary: oklch(0.628 0.225 296);
-  --primary-deep: oklch(from var(--primary) max(0.05, calc(l - 0.16)) c h);
-  --primary-glow: oklch(from var(--primary) min(0.95, calc(l + 0.18)) c h);
-  --primary-foreground: oklch(1 0 0);
+  --popover: #1d2223;
+  --popover-foreground: #e7e6e0;
 
-  --secondary: oklch(0.227 0 0); /* #1C1C1C */
-  --secondary-foreground: oklch(0.97 0 0);
+  --primary: #c4e34f; /* lime, 12.7:1 */
+  --primary-deep: oklch(from var(--primary) max(0.05, calc(l - 0.08)) c h);
+  --primary-glow: oklch(from var(--primary) min(0.95, calc(l + 0.08)) c h);
+  --primary-foreground: #111415;
 
-  --accent: oklch(0.621 0.132 39);
-  --accent-deep: oklch(from var(--accent) max(0.05, calc(l - 0.13)) c h);
-  --accent-foreground: oklch(1 0 0);
+  --secondary: #202526;
+  --secondary-foreground: #e7e6e0;
+  --muted: #202526;
+  --muted-foreground: #9ba29f; /* bone-muted, 7.1:1 */
 
-  --muted: oklch(0.227 0 0);
-  --muted-foreground: oklch(0.683 0 0); /* #999 — Vercel gray-500 */
+  --accent: #c4e34f;
+  --accent-deep: oklch(from var(--accent) max(0.05, calc(l - 0.06)) c h);
+  --accent-foreground: #111415;
 
-  --border: oklch(0.28 0 0); /* #292929 */
-  --input: oklch(0.227 0 0);
-  --ring: oklch(0.628 0.225 296);
+  --border: #2a3032; /* ink-line */
+  --input: #2a3032;
+  --ring: #c4e34f;
 
-  --success: oklch(0.814 0.192 155.7); /* #22E58C */
-  --success-foreground: oklch(0.146 0 0);
-  --warning: oklch(0.77 0.165 70.6); /* #F59E0B */
-  --warning-foreground: oklch(0.146 0 0);
-  --destructive: oklch(0.677 0.213 15.6); /* #FF4F6D */
-  --destructive-foreground: oklch(0.146 0 0);
-  --info: oklch(0.732 0.142 254.4); /* #5FB3FF */
-  --info-foreground: oklch(0.146 0 0);
+  --success: #5db98a;
+  --success-foreground: #111415;
+  --warning: #e6c84f;
+  --warning-foreground: #111415;
+  --destructive: #e8705f;
+  --destructive-foreground: #111415;
+  --info: #7fa8d9;
+  --info-foreground: #111415;
 
-  /* Status (D4 — dark mode mirror of light defaults) ------------------ */
-  --status-online: oklch(0.814 0.192 155.7);
-  --status-online-foreground: oklch(0.146 0 0);
-  --status-offline: oklch(0.677 0.213 15.6);
-  --status-offline-foreground: oklch(0.146 0 0);
-  --status-degraded: oklch(0.77 0.165 70.6);
-  --status-degraded-foreground: oklch(0.146 0 0);
-  --status-info: oklch(0.732 0.142 254.4);
-  --status-info-foreground: oklch(0.146 0 0);
+  --status-online: #5db98a;
+  --status-online-foreground: #111415;
+  --status-offline: #e8705f;
+  --status-offline-foreground: #111415;
+  --status-degraded: #e6c84f;
+  --status-degraded-foreground: #111415;
+  --status-info: #7fa8d9;
+  --status-info-foreground: #111415;
 
-  /* In dark mode, shadows are heavier ink (against the dark surface) and
-     * the glow brightens. Both still derive from theme tokens.
-     * Post-T2.5: OKLCH-aware composition via color-mix() — black ink via
-     * the literal oklch(0 0 0) (no theme indirection needed).
-     */
+  /* Shadows are heavier ink against the dark surface. */
   --shadow-sm: 0 1px 2px 0 oklch(0 0 0 / 0.4);
   --shadow-md: 0 2px 8px -2px oklch(0 0 0 / 0.5), 0 1px 3px oklch(0 0 0 / 0.4);
   --shadow-lg: 0 12px 32px -8px oklch(0 0 0 / 0.6), 0 4px 12px oklch(0 0 0 / 0.4);
@@ -214,7 +190,7 @@
 }
 
 /* Forced colors (Windows High Contrast Mode) — D7 / ADR-0008 ----------- *
- * Maps LoopZero's semantic tokens to system colors so the UI remains usable
+ * Maps the semantic tokens to system colors so the UI remains usable
  * (and required by WCAG 1.4.1) when the OS forces a high-contrast palette.
  * Decorative textures opt out via `forced-color-adjust: none` (the dotted
  * patterns and hero glow would invert into solid blocks otherwise).
@@ -244,8 +220,8 @@
   }
 
   /* Texture utilities are decorative — keep them out of the system-color map. */
-  .bg-dotted-violet,
-  .bg-dotted-violet-strong,
+  .bg-dotted-brand,
+  .bg-dotted-brand-strong,
   .bg-hero-glow,
   .bg-paper-grain {
     forced-color-adjust: none;
@@ -276,12 +252,9 @@
   }
 }
 
-/* Texture utilities (signature) ---------------------------------------- *
- * Post-T2.5: tokens are OKLCH; we compose alpha via color-mix(in oklch, …),
- * which is perceptually correct and works with any color-space variable.
- */
+/* Texture utilities. */
 @layer utilities {
-  .bg-dotted-violet {
+  .bg-dotted-brand {
     background-image: radial-gradient(
       color-mix(in oklch, var(--primary) 8%, transparent) 1px,
       transparent 1px
@@ -289,7 +262,7 @@
     background-size: 20px 20px;
   }
 
-  .bg-dotted-violet-strong {
+  .bg-dotted-brand-strong {
     background-image: radial-gradient(
       color-mix(in oklch, var(--primary) 16%, transparent) 1px,
       transparent 1px

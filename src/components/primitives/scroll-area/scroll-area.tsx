@@ -4,14 +4,14 @@ import type { ComponentPropsWithoutRef, ElementRef } from "react";
 import { cn } from "../../../lib/cn.js";
 
 /**
- * ScrollArea — custom scroller with Violet Forge styling.
+ * ScrollArea — custom scroller styled from the tokens.
  *
  * Built on Radix ScrollArea so the native scrollbar is always hidden and the
  * custom thumb stays consistent across Chrome/Firefox/Safari/macOS-trackpad.
  *
  * Visual:
  *   - track is transparent, only the thumb is visible.
- *   - thumb is `--primary` at 25% opacity by default; on hover, 45% with violet glow.
+ *   - thumb is `--primary` at 25% opacity by default; on hover, 45% with a glow.
  *   - active drag bumps to 60%.
  *   - the rounded full pill thumb plays well with the brutalist border language
  *     but stays subtle (1.5px wide on rest, 3px on hover).
@@ -84,7 +84,7 @@ const ScrollBar = forwardRef<
     orientation={orientation}
     className={cn(
       "z-10 flex touch-none select-none p-0.5 transition-[width,height,background-color] duration-base ease-out-soft",
-      // hover state slightly lifts the track with a near-invisible violet wash
+      // hover state slightly lifts the track with a near-invisible wash of the brand color
       "hover:bg-primary/5",
       orientation === "vertical" &&
         (size === "thin"

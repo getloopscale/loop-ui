@@ -6,7 +6,7 @@ import { cn } from "../../../lib/cn.js";
 /**
  * Tabs — built on Radix Tabs.
  *
- * Visual: underlined active tab in primary (violet), inactive in muted-foreground.
+ * Visual: underlined active tab in the brand color, inactive in muted-foreground.
  * Used in project views (Overview / Deployments / Logs / Settings).
  */
 

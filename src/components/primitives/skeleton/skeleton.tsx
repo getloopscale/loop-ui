@@ -6,7 +6,7 @@ import { useInLiveRegion } from "../../../lib/live-region-context.js";
 /**
  * Skeleton — placeholder block shown while content is loading.
  *
- * Uses --muted as base + a subtle shimmer that respects the violet theme.
+ * Uses --muted as base + a subtle shimmer that follows the theme.
  * Compose multiple Skeletons to mirror your component layout while loading.
  *
  * Accessibility (LOW-004): the default `role="status"` + `aria-live="polite"`
