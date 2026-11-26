@@ -1,7 +1,7 @@
 /**
  * Data contracts for the session-level components (M9). A session groups traces that share a
  * `session.id`; `SessionTraceItem` is the trace-level shape both `SessionSummary` and
- * `SessionTimeline` consume — the intersection of the theo-lens traces-list row and the peer
+ * `SessionTimeline` consume — the intersection of the looptrace traces-list row and the peer
  * session views (phoenix numTraces+latency+cost, langfuse timestamp+name+latency). Timestamps
  * accept unix-ns (bigint | numeric string) or ISO — normalized by the trace-core `toNs`.
  */

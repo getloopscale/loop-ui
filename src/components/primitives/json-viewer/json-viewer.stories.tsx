@@ -35,7 +35,7 @@ export const CollapsedDepth: Story = () => (
 );
 
 /**
- * Detail panel — the theo-memory detail panel in miniature:
+ * Detail panel — the loopmem detail panel in miniature:
  * metadados no DescriptionList + payload JSONB no JsonViewer.
  */
 export const DetailPanel: Story = () => (

@@ -1,16 +1,16 @@
-/* Theo UI — pre-compile entry for the shipped utility CSS.
+/* LoopScale UI — pre-compile entry for the shipped utility CSS.
  *
  * Consumed at LIBRARY BUILD TIME by `scripts/build-precompiled-css.ts`, never by a consumer.
  * Tailwind v4 reads this file, scans the `@source` globs against this repo's `src/` tree, and
  * emits `dist/components.css` with the materialized rules for every class the components
- * reference. `dist/styles.css` then `@import`s it, so one `@import "@usetheo/ui/styles.css"`
+ * reference. `dist/styles.css` then `@import`s it, so one `@import "@loopscale/ui/styles.css"`
  * pulls in every utility the library needs regardless of package-manager layout.
  *
  * ## Why this is pre-compiled rather than left to the consumer's Tailwind
  *
  * Tailwind v4's `@source` glob does not follow symlinks. Under pnpm,
- * `node_modules/@usetheo/ui` is a symlink into `node_modules/.pnpm/…`, so a consumer-side
- * `@source "node_modules/@usetheo/ui/dist/**\/*.js"` expands to ZERO matches and every
+ * `node_modules/@loopscale/ui` is a symlink into `node_modules/.pnpm/…`, so a consumer-side
+ * `@source "node_modules/@loopscale/ui/dist/**\/*.js"` expands to ZERO matches and every
  * hover/focus/active/data-state variant goes unemitted — components render flat. Shipping the
  * rules as static bytes removes the filesystem dependency entirely.
  *

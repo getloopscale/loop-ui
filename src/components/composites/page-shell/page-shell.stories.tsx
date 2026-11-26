@@ -16,7 +16,7 @@ export const WithSearch: Story = () => {
   return (
     <PageShell
       title="Projects"
-      description="All your TheoCloud projects."
+      description="All your LoopZero Cloud projects."
       search={{ placeholder: "Search projects…", value: q, onChange: setQ }}
     >
       <p className="font-sans text-body-md">Filtered by: "{q || "(nothing)"}"</p>
@@ -47,7 +47,7 @@ export const ErrorState: Story = () => (
     error={{
       message: "Could not load domains. Network failed.",
       onRetry: () => alert("retry"),
-      docsHref: "https://docs.usetheo.dev/theoui",
+      docsHref: "https://docs.getloopscale.com/ui",
     }}
   />
 );

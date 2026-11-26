@@ -6,9 +6,9 @@
   "description": "Controlled navigator across alternative message branches (e.g. regenerated responses): '‹ 2 / 5 ›' with prev/next Buttons (accessible labels 'Previous branch' / 'Next branch'). Fully controlled — the consumer owns index and reacts to onPrev/onNext; regenerate/streaming is a platform concern. Prev is disabled at the first branch, next at the last; a single branch (count <= 1) renders nothing. Composes Button — zero new dependency.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/button.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/button.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

@@ -7,7 +7,7 @@ import { Badge } from "../badge/badge.js";
 import { Button } from "./button.js";
 
 /**
- * usetheodev/usetheo-ui#18 — a page importing `Button` must not stream in two pieces.
+ * getloopscale/ui#18 — a page importing `Button` must not stream in two pieces.
  *
  * The reported symptom: React's SSR flushes the shell first and delivers the content afterwards
  * inside a `<div hidden id="S:0">` for a client script to move into place. The reader watches the

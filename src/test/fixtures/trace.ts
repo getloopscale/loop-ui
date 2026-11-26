@@ -1,6 +1,6 @@
 /**
  * Shared trace fixtures for the trace-native component family (M8 T1.1).
- * Modeled after real agent traces from the theo-lens suite: branching,
+ * Modeled after real agent traces from the looptrace suite: branching,
  * a retried tool call, an errored span, an orphan (malformed parent) and a
  * clock-skewed span. Deterministic — no Date.now(), no randomness.
  */

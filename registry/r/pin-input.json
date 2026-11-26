@@ -6,8 +6,8 @@
   "description": "Multi-slot OTP / code input primitive. N separate boxes (default 6) that auto-advance focus on input. Paste fills all slots from clipboard with whitespace stripped. Arrow keys navigate; backspace clears current slot then moves focus back when empty. numeric / alphanumeric inputMode (default numeric, triggers mobile numeric keyboard via pattern=[0-9]*). Optional mask renders bullets. Optional error state applies destructive border. onComplete fires once when value reaches length — NOT on mount with pre-filled value.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

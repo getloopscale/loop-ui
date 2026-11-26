@@ -9,10 +9,10 @@
     "@tanstack/react-virtual"
   ],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/badge.json",
-    "https://usetheodev.github.io/usetheo-ui/r/trace.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/badge.json",
+    "https://getloopscale.github.io/ui/r/trace.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

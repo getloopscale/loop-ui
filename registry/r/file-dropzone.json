@@ -5,8 +5,8 @@
   "title": "FileDropzone",
   "description": "Drag-drop + file-picker upload primitive, dependency-free (native HTML5 DnD): typed rejections (invalid type / too large / too small / too many), accept map with MIME wildcard and extension matching, nested-drag target counting, keyboard-accessible picker, idle/drag-over/drag-reject/disabled states.",
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

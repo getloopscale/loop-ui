@@ -1,4 +1,4 @@
-/* Theo UI — Design System "Violet Forge" tokens.
+/* LoopScale UI — Design System "Violet Forge" tokens.
  *
  * Tokens normativos. Não edite valores aqui sem revisão do design system.
  * Referência: docs/design-system.md
@@ -8,7 +8,7 @@
  *   - Default é light. Dark é ativado via [data-theme="dark"] ou .dark.
  *   - HSL split (h s l) em vez de hex permite alpha via color-mix() ou hsl(var(--x) / .5).
  *
- * Roxo Theo: #A855F7  →  oklch(0.628 0.225 296)  (electric violet — unified 2026-06-09)
+ * Roxo LoopScale: #A855F7  →  oklch(0.628 0.225 296)  (electric violet — unified 2026-06-09)
  * Burnt sienna:  #C96442  →  hsl(15 54% 53%)
  */
 
@@ -33,13 +33,13 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.146 0 0);
 
-  /* Primary — Theo violet (equity) ------------------------------------- *
+  /* Primary — LoopScale violet (equity) ------------------------------------- *
    * Post-T3.1 (ADR-0006): -deep and -glow are derived algorithmically via
    * OKLCH relative-color syntax. Themes that need a per-token override may
    * still declare these explicitly — the cascade resolves the override.
    * `max()`/`min()` clamps protect dark/light themes from L overflow (EC-7).
    */
-  --primary: oklch(0.628 0.225 296); /* #A855F7 — Theo violet electric (unified 2026-06-09) */
+  --primary: oklch(0.628 0.225 296); /* #A855F7 — LoopScale violet electric (unified 2026-06-09) */
   --primary-deep: oklch(from var(--primary) max(0.05, calc(l - 0.16)) c h);
   --primary-glow: oklch(from var(--primary) min(0.95, calc(l + 0.18)) c h);
   --primary-foreground: oklch(1 0 0);
@@ -214,7 +214,7 @@
 }
 
 /* Forced colors (Windows High Contrast Mode) — D7 / ADR-0008 ----------- *
- * Maps Theo's semantic tokens to system colors so the UI remains usable
+ * Maps LoopZero's semantic tokens to system colors so the UI remains usable
  * (and required by WCAG 1.4.1) when the OS forces a high-contrast palette.
  * Decorative textures opt out via `forced-color-adjust: none` (the dotted
  * patterns and hero glow would invert into solid blocks otherwise).

@@ -8,12 +8,12 @@ describe("LoginSplit", () => {
       <LoginSplit
         left={<div>Form</div>}
         right={<div>Illustration</div>}
-        footer={<div>© Theo</div>}
+        footer={<div>© LoopScale</div>}
       />,
     );
     expect(screen.getByText("Form")).toBeInTheDocument();
     expect(screen.getByText("Illustration")).toBeInTheDocument();
-    expect(screen.getByText("© Theo")).toBeInTheDocument();
+    expect(screen.getByText("© LoopScale")).toBeInTheDocument();
   });
 
   it("applies reverse modifier when set", () => {

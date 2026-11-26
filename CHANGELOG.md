@@ -7,7 +7,7 @@
 - 4973612: `Card` and `Sidebar.Item` accept `asChild`.
 
   Two issues, one question, answered the same way on purpose — answering them differently would have
-  been worse than either answer alone (usetheodev/usetheo-ui#31, #32).
+  been worse than either answer alone (getloopscale/ui#31, #32).
 
   **`Sidebar.Item asChild`** lets a router `Link` be the element the row renders, so the router sees
   the link and can prefetch it. `as="a" href={to}` plus an `onClick` calling `navigate()` works and is
@@ -41,13 +41,13 @@
 
   The seed that created this repository brought `src/styles/tailwind-preset.ts` across but not the CSS
   pipeline around it, so from 0.14.0 the tarball contained zero `.css` files while consumers kept
-  importing `@usetheo/ui/preset.css`, `/components.css` and `/fonts-cdn.css`. A clean `vite build`
+  importing `@loopscale/ui/preset.css`, `/components.css` and `/fonts-cdn.css`. A clean `vite build`
   against those versions fails to resolve them; the deployed dashboard only kept working because it had
   been built back in the 0.13.x era.
 
   `components.css` is COMPILED rather than restored — the Tailwind v4 CLI runs against
   `src/styles/components-entry.css`, which scans this repo's own `src/`, so the shipped utility rules
-  match the classes the components reference today. The static stylesheets come from `@usetheo/ui@0.13.2`,
+  match the classes the components reference today. The static stylesheets come from `@loopscale/ui@0.13.2`,
   the last release that published them; every token the current preset references is declared there.
 
   The library pre-compiles those utilities instead of leaving them to the consumer's Tailwind because
@@ -55,7 +55,7 @@
   every hover/focus/data-state variant goes unemitted.
 
   `./preset` still resolves to the JS preset, which is what it has meant since the seed. The CSS preset
-  gets its own explicit `./preset.css` rather than reclaiming that key (usetheodev/usetheo-ui#10).
+  gets its own explicit `./preset.css` rather than reclaiming that key (getloopscale/ui#10).
 
 ## 0.35.4
 
@@ -67,7 +67,7 @@
   nos dois casos. O efeito era que nenhum atributo de âncora compilava — `target`, `rel`, `download`,
   `hrefLang` — num elemento que os renderiza sem problema. Um link de barra lateral para outro site,
   que quase sempre quer `target="_blank" rel="noreferrer"`, não podia ser escrito com este componente
-  (usetheodev/usetheo-ui#27).
+  (getloopscale/ui#27).
 
   `ItemProps` passa a ser uma união discriminada pelo `as`, com `href` obrigatório no ramo de âncora
   — uma âncora sem `href` não é focável por teclado nem anunciada como link, e essa combinação
@@ -109,7 +109,7 @@
 
 - ac40336: O pacote passa a dizer de onde vem e o que contém.
 
-  Encontrado ao construir uma app sobre a stack Theo (usetheokit/theokit-ui#73): quem procurava um
+  Encontrado ao construir uma app sobre a stack LoopScale (usetheokit/theokit-ui#73): quem procurava um
   `Sidebar`, uma `DataTable` ou um `Select` não os encontrava e reescreveu-os à mão — estavam aqui,
   instalados, o tempo todo.
 
@@ -122,7 +122,7 @@
   - `publishConfig` com `access: public` e `provenance: true`, para que o artefacto publicado leve
     atestação de origem.
 
-All notable changes to `@usetheo/ui` are documented in this file.
+All notable changes to `@loopscale/ui` are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).

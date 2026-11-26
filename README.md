@@ -1,7 +1,7 @@
-# @usetheo/ui
+# @loopscale/ui
 
 Violet Forge design system — the generic React components and primitives that form the non-AI
-foundation of the Theo UI stack. Apache-2.0, ESM-only.
+foundation of the LoopScale UI stack. Apache-2.0, ESM-only.
 
 This is the layer with **no agent in it**: the shell, the tables, the forms, the feedback states,
 the dashboard pieces. [`@theokit/ui`](https://github.com/usetheokit/theokit-ui) builds on top of it
@@ -13,13 +13,13 @@ the two compose without a visual seam.
 ## Install
 
 ```bash
-pnpm add @usetheo/ui
+pnpm add @loopscale/ui
 ```
 
 Or copy a single component, shadcn-style, from the published registry:
 
 ```bash
-npx shadcn@latest add https://usetheodev.github.io/usetheo-ui/r/data-table.json
+npx shadcn@latest add https://getloopscale.github.io/ui/r/data-table.json
 ```
 
 ## Catalog
@@ -59,4 +59,4 @@ pnpm sync:readme      # regenerate the catalog block above
 pnpm registry:build   # rebuild registry/r/*.json for the shadcn path
 ```
 
-> Seeded from `theo-ui` @ `2b46eca` (2026-07-03, AI-exclusive pivot milestone M-B).
+> Seeded from `loopscale-ui` @ `2b46eca` (2026-07-03, AI-exclusive pivot milestone M-B).

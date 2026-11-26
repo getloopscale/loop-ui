@@ -1,7 +1,7 @@
 import { Sidebar } from "./sidebar.js";
 
 /**
- * Type-level contract for `Sidebar.Item`'s `as` discriminant — usetheodev/usetheo-ui#27.
+ * Type-level contract for `Sidebar.Item`'s `as` discriminant — getloopscale/ui#27.
  *
  * The runtime has always branched on `as`, rendering a real `<a>` with anchor attributes. The type
  * described a `<button>` in both arms, so every anchor attribute failed to compile on an element

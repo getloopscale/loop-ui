@@ -29,7 +29,7 @@ const textareaVariants = cva(
         sm: "min-h-[64px] px-2.5 py-1.5 text-body-sm",
         // md: text scale + padding tighten to body-sm per FAANG density.
         // min-h stays 96px because multiline has its own height rationale.
-        md: "min-h-[6rem] px-[var(--theo-control-px,0.75rem)] py-1.5 text-body-sm",
+        md: "min-h-[6rem] px-[var(--loopscale-control-px,0.75rem)] py-1.5 text-body-sm",
         lg: "min-h-[128px] px-4 py-2.5 text-body-md",
       },
     },

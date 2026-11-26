@@ -6,9 +6,9 @@
   "description": "Semantic status indicator (small colored circle + optional label). Five status kinds: live (success), building (warning, auto-pulses), failed (destructive), idle (muted), warning (warning, static). Three sizes (xs 6px / sm 8px default / md 10px). When neither label nor aria-label is provided, auto-applies aria-label=status and emits a dev warning.",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/env.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/env.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {

@@ -3,10 +3,10 @@
  * global-v4.css é o entry CANÔNICO do ecossistema (mesma experiência do
  * dashboard/@theokit/ui styles.css): tailwind v4 core + fonts + tokens
  * runtime + @theme v4 + base layer (focus ring violeta, scrollbar,
- * ligatures Geist, cursor de botão). Ver issue usetheo-ui#10 — estes
+ * ligatures Geist, cursor de botão). Ver issue loopscale-ui#10 — estes
  * arquivos devem voltar a ser publicados no pacote.
  *
- * O @config soma o theoUIPreset DESTE repo (tailwindcss-animate + tokens
+ * O @config soma o loopscaleUIPreset DESTE repo (tailwindcss-animate + tokens
  * utility-level que o @theme não cobre) e o @source escaneia src/.
  */
 @import "./global-v4.css";

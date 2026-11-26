@@ -148,7 +148,7 @@ type ItemAsChildProps = ItemBaseProps &
  * described a button in both. The consequence was that no anchor attribute could be passed:
  * `target`, `rel`, `download`, `hrefLang` all failed to compile on an element that renders them
  * fine. A sidebar link to another site, which almost always wants `target="_blank" rel="noreferrer"`,
- * could not be written with this component at all (usetheodev/usetheo-ui#27).
+ * could not be written with this component at all (getloopscale/ui#27).
  */
 type ItemProps = ItemButtonProps | ItemAnchorProps | ItemAsChildProps;
 

@@ -12,10 +12,10 @@ interface Domain {
 }
 
 const domains: Domain[] = [
-  { id: "1", name: "usetheo.dev", status: "active", lastVerified: "2026-05-20" },
-  { id: "2", name: "docs.usetheo.dev", status: "active", lastVerified: "2026-05-18" },
-  { id: "3", name: "blog.usetheo.dev", status: "pending", lastVerified: "—" },
-  { id: "4", name: "old.usetheo.dev", status: "failed", lastVerified: "2026-05-10" },
+  { id: "1", name: "getloopscale.com", status: "active", lastVerified: "2026-05-20" },
+  { id: "2", name: "docs.getloopscale.com", status: "active", lastVerified: "2026-05-18" },
+  { id: "3", name: "blog.getloopscale.com", status: "pending", lastVerified: "—" },
+  { id: "4", name: "old.getloopscale.com", status: "failed", lastVerified: "2026-05-10" },
 ];
 
 const columns: DataTableColumn<Domain>[] = [
@@ -77,7 +77,7 @@ export const RowActions: Story = () => (
 export const Paginated: Story = () => {
   const many = Array.from({ length: 23 }, (_, i) => ({
     id: `r-${i}`,
-    name: `domain-${i}.usetheo.dev`,
+    name: `domain-${i}.getloopscale.com`,
     status: (["active", "pending", "failed"] as const)[i % 3] ?? "active",
     lastVerified: "2026-05-20",
   }));

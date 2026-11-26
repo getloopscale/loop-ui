@@ -6,7 +6,7 @@ import { Sidebar } from "./sidebar.js";
 
 describe("Sidebar", () => {
   /**
-   * usetheodev/usetheo-ui#27 — the anchor arm renders anchor attributes.
+   * getloopscale/ui#27 — the anchor arm renders anchor attributes.
    *
    * The runtime already did this; the TYPES said otherwise, so no consumer could write it. A
    * sidebar link to another site wants `target="_blank" rel="noreferrer"`, and without them it
@@ -42,14 +42,14 @@ describe("Sidebar", () => {
   it("renders header, sections and items", () => {
     render(
       <Sidebar>
-        <Sidebar.Header>theo-ui</Sidebar.Header>
+        <Sidebar.Header>loopscale-ui</Sidebar.Header>
         <Sidebar.Section title="Workspace">
           <Sidebar.Item>Overview</Sidebar.Item>
           <Sidebar.Item>Deployments</Sidebar.Item>
         </Sidebar.Section>
       </Sidebar>,
     );
-    expect(screen.getByText("theo-ui")).toBeInTheDocument();
+    expect(screen.getByText("loopscale-ui")).toBeInTheDocument();
     expect(screen.getByText("Workspace")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Overview" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Deployments" })).toBeInTheDocument();
@@ -130,7 +130,7 @@ describe("Sidebar", () => {
   it("has no axe accessibility violations", async () => {
     const { container } = render(
       <Sidebar>
-        <Sidebar.Header>theo-ui</Sidebar.Header>
+        <Sidebar.Header>loopscale-ui</Sidebar.Header>
         <Sidebar.Section title="Workspace">
           <Sidebar.Item active>Overview</Sidebar.Item>
           <Sidebar.Item count={3}>Deployments</Sidebar.Item>

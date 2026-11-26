@@ -17,7 +17,7 @@ const projects: Project[] = [
     status: "live",
     region: "iad1",
     lastDeployedAt: "2m ago",
-    url: "https://acme-api.usetheo.dev",
+    url: "https://acme-api.getloopscale.com",
   },
   {
     id: "2",

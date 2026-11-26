@@ -11,7 +11,7 @@ import { cn } from "../../../lib/cn.js";
  * Future rebrand / dark-mode tweaks propagate automatically — no consumer
  * code change.
  *
- * Visual spec (per `theo/docs/handoff/2026-05-23-theo-ui-cloud-dashboard-gaps-brief.md`):
+ * Visual spec (per `loopzero/docs/handoff/2026-05-23-ui-cloud-dashboard-gaps-brief.md`):
  *
  *   | tier         | bg                  | border                   | text                  |
  *   |--------------|---------------------|--------------------------|-----------------------|

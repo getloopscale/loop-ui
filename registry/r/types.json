@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "types",
   "type": "registry:lib",
-  "title": "Theo UI shared types",
-  "description": "Shared TypeScript helper types (IconComponent, etc.) used across Theo UI.",
+  "title": "LoopScale UI shared types",
+  "description": "Shared TypeScript helper types (IconComponent, etc.) used across LoopScale UI.",
   "files": [
     {
       "path": "lib/types.ts",

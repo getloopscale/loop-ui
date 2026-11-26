@@ -59,7 +59,7 @@ describe("Select", () => {
     expect(trigger.className).toContain("text-body-sm");
   });
 
-  it("Trigger md (default) reads height from --theo-control-h var + text-body-sm (FAANG density)", () => {
+  it("Trigger md (default) reads height from --loopscale-control-h var + text-body-sm (FAANG density)", () => {
     render(
       <Select>
         <Select.Trigger aria-label="m">
@@ -68,7 +68,7 @@ describe("Select", () => {
       </Select>,
     );
     const trigger = screen.getByLabelText("m");
-    expect(trigger.className).toContain("h-[var(--theo-control-h,2rem)]");
+    expect(trigger.className).toContain("h-[var(--loopscale-control-h,2rem)]");
     expect(trigger.className).toContain("text-body-sm");
   });
 

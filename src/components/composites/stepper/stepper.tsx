@@ -4,7 +4,7 @@ import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "../../../lib/cn.js";
 
 /**
- * Stepper — multi-step pipeline progress, promoted from the theo-cloud
+ * Stepper — multi-step pipeline progress, promoted from the loopzero-cloud
  * dashboard build-timeline (production). Read-only by design: steps are NOT
  * clickable (pipeline visualization, not a wizard). 100% controlled — live
  * updates (SSE/polling) belong to the consumer.

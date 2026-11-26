@@ -6,9 +6,9 @@
   "description": "Labeled multi-level severity indicator. Maps a Severity level (ok/warning/alert/no_data/unknown/paused — langfuse MonitorSeverity vocabulary, lowercased) to a Badge variant, with a human-readable default label. Per-severity variant/label overrides via props; unmapped values fall back to the neutral outline variant. Composes the Badge primitive — not a status dot (distinct from StatusIndicator).",
   "dependencies": [],
   "registryDependencies": [
-    "https://usetheodev.github.io/usetheo-ui/r/cn.json",
-    "https://usetheodev.github.io/usetheo-ui/r/badge.json",
-    "https://usetheodev.github.io/usetheo-ui/r/tailwind-preset.json"
+    "https://getloopscale.github.io/ui/r/cn.json",
+    "https://getloopscale.github.io/ui/r/badge.json",
+    "https://getloopscale.github.io/ui/r/tailwind-preset.json"
   ],
   "files": [
     {
